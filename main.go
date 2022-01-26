@@ -9,13 +9,13 @@ func main() {
 
 	amanda := models.Client{
 		Person: models.Person{
-			Name:     "Xuba Peituda",
-			Age:      18,
-			Email:    "xuba@rabuda.pqp",
-			Password: "pirarucu",
+			Name:     "Amanda Albuquerque",
+			Age:      25,
+			Email:    "amanda@albuquerque.com",
+			Password: "amanda",
 		},
-		Height: 10.0,
-		Weight: 500.0,
+		Height: 1.59,
+		Weight: 67.0,
 	}
 
 	fmt.Println(amanda.Email)
