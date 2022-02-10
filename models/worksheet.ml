@@ -1,4 +1,4 @@
-type periodization = ABC | ABCD | ABCDE | ABCDEF | UNK of string
+type periodization = ABC | ABCD | ABCDE | ABCDEF | UNK of string [@@deriving yojson]
 
 (*type group = Arm | Chest | Shoulder | Back | Leg*)
 
@@ -8,7 +8,7 @@ type t =
         expiration_date : float;
         type_of_periodization : periodization;
         list_of_exercices : Exercice.t list
-    }
+    }[@@deriving yojson]
 
 let string_of_periodization prd = 
     match prd with

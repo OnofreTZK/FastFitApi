@@ -4,6 +4,10 @@ type periodization
 
 type t
 
+val of_yojson : Yojson.Safe.t -> (t, string) Result.result
+
+val to_yojson : t -> Yojson.Safe.t
+
 (* Create a periodization from a string *)
 val periodization_of_str : string -> periodization
 

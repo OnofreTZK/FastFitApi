@@ -8,7 +8,7 @@ type t =
         height : float;
         weight : float;
         worksheet: Worksheet.t
-    }
+    }[@@deriving yojson]
 
 
 let name client = client.name

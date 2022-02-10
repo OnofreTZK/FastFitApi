@@ -3,8 +3,8 @@ type t =
         name : string;
         group : string;
         image : string;
-        exercice_id : Uuidm.t
-    }
+        exercice_id : int
+    }[@@deriving yojson]
 
 
 let name exc = exc.name
