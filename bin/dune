@@ -1,0 +1,5 @@
+(executable 
+ (public_name fastfit)
+ (name main)
+ (libraries opium)
+ (preprocess (pps ppx_deriving_yojson)))
