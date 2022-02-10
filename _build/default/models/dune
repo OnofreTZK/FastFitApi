@@ -1,4 +1,0 @@
-(library
- (name models)
- (libraries unix sha uuidm)
- (preprocess (pps ppx_deriving_yojson)))
