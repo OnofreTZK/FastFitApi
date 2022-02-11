@@ -1,5 +1,5 @@
 (executable 
  (public_name fastfit)
  (name main)
- (libraries opium)
+ (libraries models dbcontroller opium)
  (preprocess (pps ppx_deriving_yojson)))

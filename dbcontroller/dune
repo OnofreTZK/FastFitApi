@@ -1,0 +1,4 @@
+(library
+ (name dbcontroller)
+ (libraries models caqti caqti-lwt caqti-driver-postgresql uuidm ppx_rapper_lwt)
+ (preprocess (pps lwt_ppx ppx_rapper)))
