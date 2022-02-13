@@ -65,7 +65,7 @@ CREATE TABLE public.personal (
     age integer,
     email character varying NOT NULL,
     password character varying NOT NULL,
-    list_of_client json
+    list_of_client character varying(200)
 );
 
 
@@ -86,6 +86,7 @@ COPY public.clients (id, name, username, age, email, password, height, weight, w
 --
 
 COPY public.exercice (id, name, muscular_group, image, exercice_id) FROM stdin;
+e66f12c4-c7af-4a28-ad87-008a34a4b0ba	Supino Reto	peito		0
 \.
 
 
