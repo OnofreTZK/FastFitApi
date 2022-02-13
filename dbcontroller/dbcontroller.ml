@@ -1,4 +1,4 @@
-(* open Models *)
+open Models
 
 exception Query_failed of string
 
@@ -35,6 +35,7 @@ let ensure_table_client_exists =
                 CREATE TABLE IF NOT EXISTS clients (
                     id VARCHAR PRIMARY KEY NOT NULL,
                     name VARCHAR NOT NULL,
+                    username VARCHAR NOT NULL,
                     age INT NULL,
                     email VARCHAR NOT NULL,
                     password VARCHAR NOT NULL,
@@ -52,6 +53,7 @@ let ensure_table_personal_exists =
             {sql|
                 CREATE TABLE IF NOT EXISTS personal (
                     id VARCHAR PRIMARY KEY NOT NULL,
+                    name VARCHAR NOT NULL,
                     username VARCHAR NOT NULL,
                     age INT NULL,
                     email VARCHAR NOT NULL,
@@ -87,4 +89,31 @@ let migrate () =
          |> Lwt_main.run
 (* ********************************************************************************************* *)
 
+
+(* Queries *)
+(* ********************************************************************************************* *)
+(* INSERT CLIENT *)
+
+let insert_client usr =
+    (*
+    let name = Client.name usr
+    in
+    let username = Client.username usr
+    in
+    let email = Client.email usr
+    in
+    let password = Client.password usr
+    in
+    let height = Client.height usr
+    in
+    let weight = Client.weight usr
+    in
+    let worksheet = Client.worksheet usr
+    in
+    in*)
+    let stored_id = Uuidm.create `V4 |> Uuidm.to_string
+    in
+    let stored_usr = (Client.stored_of_t usr stored_id)
+    in
+    dispatch (Client.insert stored_usr)
 

@@ -30,6 +30,14 @@ let create_worksheet ~initial_date ~expiration_date ~type_of_periodization ~list
     {initial_date=initial_date; expiration_date=expiration_date; type_of_periodization=type_of_periodization;
     list_of_exercices=list_of_exercices}
 
+let empty () =
+    {
+        initial_date=0.0;
+        expiration_date=0.0;
+        type_of_periodization=UNK "empty";
+        list_of_exercices=[]
+    }
+
 let type_of_periodization wst = wst.type_of_periodization
 
 let duration_in_weeks wst =

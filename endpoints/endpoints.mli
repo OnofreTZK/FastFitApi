@@ -1,3 +1,3 @@
 open Opium
 
-val create_user : Request.t -> Response.t Lwt.t
+val create_user_client : Request.t -> Response.t Lwt.t

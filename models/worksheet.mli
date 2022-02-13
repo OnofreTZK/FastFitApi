@@ -18,6 +18,9 @@ val string_of_periodization : periodization -> string
 val create_worksheet : initial_date:float -> expiration_date:float -> 
     type_of_periodization:periodization -> list_of_exercices:Exercice.t list -> t
 
+(* Create a "empty" worksheet *)
+val empty : unit -> t
+
 (* Retrieve the type of the worksheet e.g: ABC into in string *)
 val type_of_periodization : t -> periodization
 
