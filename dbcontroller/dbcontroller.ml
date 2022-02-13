@@ -58,7 +58,7 @@ let ensure_table_personal_exists =
                     age INT NULL,
                     email VARCHAR NOT NULL,
                     password VARCHAR NOT NULL,
-                    list_of_client JSON NULL
+                    list_of_client VARCHAR[] NULL
                 );
             |sql}]
             ()
@@ -99,6 +99,14 @@ let insert_client usr =
     let stored_usr = (Client.stored_of_t usr stored_id)
     in
     dispatch (Client.insert stored_usr)
+
+(* INSERT personal *)
+let insert_personal usr =
+    let stored_id = Uuidm.create `V4 |> Uuidm.to_string
+    in
+    let stored_usr = (Personal.stored_of_t usr stored_id)
+    in
+    dispatch (Personal.insert stored_usr)
 
 (* INSERT EXERCICE *)
 let insert_exercice exc =
