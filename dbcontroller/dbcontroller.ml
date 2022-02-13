@@ -93,27 +93,18 @@ let migrate () =
 (* Queries *)
 (* ********************************************************************************************* *)
 (* INSERT CLIENT *)
-
 let insert_client usr =
-    (*
-    let name = Client.name usr
-    in
-    let username = Client.username usr
-    in
-    let email = Client.email usr
-    in
-    let password = Client.password usr
-    in
-    let height = Client.height usr
-    in
-    let weight = Client.weight usr
-    in
-    let worksheet = Client.worksheet usr
-    in
-    in*)
     let stored_id = Uuidm.create `V4 |> Uuidm.to_string
     in
     let stored_usr = (Client.stored_of_t usr stored_id)
     in
     dispatch (Client.insert stored_usr)
+
+(* INSERT EXERCICE *)
+let insert_exercice exc =
+    let stored_id = Uuidm.create `V4 |> Uuidm.to_string
+    in
+    let stored_exc = (Exercice.stored_of_t exc stored_id)
+    in
+    dispatch (Exercice.insert stored_exc)
 

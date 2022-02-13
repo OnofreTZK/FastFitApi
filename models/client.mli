@@ -49,5 +49,6 @@ val weight : t -> float
 (* Retrieve the worksheet *)
 val worksheet : t -> Worksheet.t
 
+(* Query to insert a new user *)
 val insert : stored -> (module Rapper_helper.CONNECTION) -> (unit, [> Caqti_error.call_or_retrieve ]) result Lwt.t
 

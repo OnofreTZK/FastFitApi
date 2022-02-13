@@ -86,6 +86,8 @@ let weight client = client.weight
 
 let worksheet client = client.worksheet
 
+(* Queries *)
+(*************************************************************************************************)
 let insert =
     [%rapper
         execute
