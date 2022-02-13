@@ -56,7 +56,6 @@ let stored_of_t usr id =
         (*stored_worksheet=usr.worksheet*)
     }
 
-
 let t_of_stored usr =
     {
         name=usr.stored_name;
@@ -88,6 +87,7 @@ let worksheet client = client.worksheet
 
 (* Queries *)
 (*************************************************************************************************)
+(* INSERT *)
 let insert =
     [%rapper
         execute
@@ -98,3 +98,16 @@ let insert =
                 %float{stored_weight});
             |sql}
             record_in]
+
+(* INSERT *)
+let read_all =
+    [%rapper
+        get_many
+            {sql|
+                SELECT @string{id}, @string{stored_name}, @string{stored_username}, @int{stored_age},
+                @string{stored_email}, @string{stored_password}, @float{stored_height}, 
+                @float{stored_weight};
+            |sql}
+            record_out]
+            ()
+

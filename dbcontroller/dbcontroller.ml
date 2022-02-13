@@ -108,3 +108,4 @@ let insert_exercice exc =
     in
     dispatch (Exercice.insert stored_exc)
 
+
