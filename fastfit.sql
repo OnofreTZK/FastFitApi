@@ -65,7 +65,7 @@ CREATE TABLE public.personal (
     age integer,
     email character varying NOT NULL,
     password character varying NOT NULL,
-    list_of_client character varying(200)
+    list_of_client character varying[]
 );
 
 
@@ -95,6 +95,7 @@ e66f12c4-c7af-4a28-ad87-008a34a4b0ba	Supino Reto	peito		0
 --
 
 COPY public.personal (id, name, username, age, email, password, list_of_client) FROM stdin;
+29e61fca-0dc2-445e-b253-baa7a87487f0	Joanderson	josantos	0	joanderson@bodybuilder.com	durateston123	\N
 \.
 
 
