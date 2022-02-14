@@ -78,6 +78,18 @@ let read_all_clients req =
     |> Response.set_status `OK
     |> Lwt.return
 
+let read_all_personals req =
+    req 
+    |> fun _ -> let open Lwt.Syntax
+    in
+    let* personals = Dbcontroller.read_all_personals ()
+    in
+    let json = [%to_yojson: Personal.t list] personals
+    in
+    Response.of_json json
+    |> Response.set_status `OK
+    |> Lwt.return
+
 let read_all_exercices req =
     req 
     |> fun _ -> let open Lwt.Syntax

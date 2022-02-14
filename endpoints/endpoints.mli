@@ -15,5 +15,8 @@ val create_exercice : Request.t -> Response.t Lwt.t
 (* GET all clients *)
 val read_all_clients : Request.t -> Response.t Lwt.t
 
+(* GET all personal *)
+val read_all_personals : Request.t -> Response.t Lwt.t
+
 (* GET all exercices *)
 val read_all_exercices : Request.t -> Response.t Lwt.t

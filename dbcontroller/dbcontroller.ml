@@ -124,7 +124,15 @@ let read_all_clients () =
     in
     clients |> Lwt.return
 
-(* SELECT CLIENTS *)
+(* SELECT PERSONALS *)
+let read_all_personals () =
+    let open Lwt.Syntax
+    in
+    let* personals = dispatch Personal.read_all
+    in
+    personals |> Lwt.return
+
+(* SELECT EXERCICES *)
 let read_all_exercices () =
     let open Lwt.Syntax
     in

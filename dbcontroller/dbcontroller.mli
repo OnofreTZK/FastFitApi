@@ -17,5 +17,8 @@ val insert_exercice : Exercice.t -> unit Lwt.t
 (* SELECT * FROM clients *)
 val read_all_clients : unit -> Client.t list Lwt.t
 
+(* SELECT * FROM personals *)
+val read_all_personals : unit -> Personal.t list Lwt.t
+
 (* SELECT * FROM exercice *)
 val read_all_exercices : unit -> Exercice.t list Lwt.t
