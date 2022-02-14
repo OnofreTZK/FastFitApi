@@ -1,1 +1,1 @@
-dune exec fastfit
+web: dune exec fastfit
