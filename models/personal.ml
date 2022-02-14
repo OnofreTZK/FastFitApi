@@ -83,4 +83,15 @@ let insert =
             |sql}
             record_in]
 
+(* INSERT *)
+let read_all =
+    [%rapper
+        get_many
+            {sql|
+                SELECT @string{name}, @string{username}, @int{age},
+                @string{email}, @string{password}
+                FROM personal;
+            |sql}
+            record_out]
+            ()
 

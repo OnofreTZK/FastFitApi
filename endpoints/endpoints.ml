@@ -63,4 +63,42 @@ let create_exercice req =
                       | Error _ -> Response.of_json (`Assoc ["Error", `String "Parse error! Verify the client model!"]) 
                                    |> Response.set_status `Bad_request;
     in
-    Lwt.return response         
+    Lwt.return response      
+
+
+let read_all_clients req =
+    req 
+    |> fun _ -> let open Lwt.Syntax
+    in
+    let* clients = Dbcontroller.read_all_clients ()
+    in
+    let json = [%to_yojson: Client.t list] clients
+    in
+    Response.of_json json
+    |> Response.set_status `OK
+    |> Lwt.return
+
+let read_all_personals req =
+    req 
+    |> fun _ -> let open Lwt.Syntax
+    in
+    let* personals = Dbcontroller.read_all_personals ()
+    in
+    let json = [%to_yojson: Personal.t list] personals
+    in
+    Response.of_json json
+    |> Response.set_status `OK
+    |> Lwt.return
+
+let read_all_exercices req =
+    req 
+    |> fun _ -> let open Lwt.Syntax
+    in
+    let* exercices = Dbcontroller.read_all_exercices ()
+    in
+    let json = [%to_yojson: Exercice.t list] exercices
+    in
+    Response.of_json json
+    |> Response.set_status `OK
+    |> Lwt.return
+

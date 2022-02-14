@@ -35,3 +35,6 @@ val exercice_id : t -> int
 
 (* Query to insert a new exercice *)
 val insert : stored -> (module Rapper_helper.CONNECTION) -> (unit, [> Caqti_error.call_or_retrieve ]) result Lwt.t
+
+(* Query to read all exercices *)
+val read_all : (module Rapper_helper.CONNECTION) -> (t list, [> Caqti_error.call_or_retrieve ]) result Lwt.t

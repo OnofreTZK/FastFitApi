@@ -1,7 +1,7 @@
 type t =
     {
         name : string;
-        group : string;
+        muscular_group : string;
         image : string;
         exercice_id : int
     }[@@deriving yojson]
@@ -26,7 +26,7 @@ type posted =
 let t_of_posted exc =
     {
         name=exc.posted_name;
-        group=exc.posted_group;
+        muscular_group=exc.posted_group;
         image="";
         exercice_id=0
     }
@@ -35,7 +35,7 @@ let stored_of_t exc id =
     {
         id=id;
         stored_name=exc.name;
-        stored_group=exc.group;
+        stored_group=exc.muscular_group;
         stored_image=exc.image;
         stored_exercice_id=exc.exercice_id
     }
@@ -43,14 +43,14 @@ let stored_of_t exc id =
 let t_of_stored exc =
     {
         name=exc.stored_name;
-        group=exc.stored_group;
+        muscular_group=exc.stored_group;
         image=exc.stored_image;
         exercice_id=int_of_string exc.id
     }
 
 let name exc = exc.name
 
-let group exc = exc.group
+let group exc = exc.muscular_group
 
 let image exc = exc.image
 
@@ -67,3 +67,13 @@ let insert =
                 %int{stored_exercice_id});
             |sql}
             record_in]
+
+let read_all =
+    [%rapper
+        get_many
+            {sql|
+                SELECT @string{name}, @string{muscular_group}, @string{image}, @int{exercice_id}
+                FROM exercice;
+            |sql}
+            record_out]
+            ()

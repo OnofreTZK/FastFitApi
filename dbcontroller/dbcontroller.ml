@@ -116,3 +116,26 @@ let insert_exercice exc =
     in
     dispatch (Exercice.insert stored_exc)
 
+(* SELECT CLIENTS *)
+let read_all_clients () =
+    let open Lwt.Syntax
+    in
+    let* clients = dispatch Client.read_all
+    in
+    clients |> Lwt.return
+
+(* SELECT PERSONALS *)
+let read_all_personals () =
+    let open Lwt.Syntax
+    in
+    let* personals = dispatch Personal.read_all
+    in
+    personals |> Lwt.return
+
+(* SELECT EXERCICES *)
+let read_all_exercices () =
+    let open Lwt.Syntax
+    in
+    let* exercices = dispatch Exercice.read_all
+    in
+    exercices |> Lwt.return
