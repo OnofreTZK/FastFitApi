@@ -13,4 +13,5 @@ let () =
     |> App.get "/user/personal/read/all/" Endpoints.read_all_personals
     |> App.get "/exercice/read/all/" Endpoints.read_all_exercices
     |> App.get "/user/client/read/one/" Endpoints.read_one_client
+    |> App.get "/user/personal/read/one/" Endpoints.read_one_personal
     |> App.run_multicore

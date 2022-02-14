@@ -120,7 +120,7 @@ let read_one =
                 SELECT @string{name}, @string{username}, @int{age},
                 @string{email}, @string{password}, @float{height}, 
                 @float{weight}
-                FROM clients
+                FROM client
                 WHERE username = %string{username_id};
             |sql}
             record_out]

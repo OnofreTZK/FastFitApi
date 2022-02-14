@@ -23,3 +23,6 @@ val read_all_exercices : Request.t -> Response.t Lwt.t
 
 (* GET one client *)
 val read_one_client : Request.t -> Response.t Lwt.t
+
+(* GET one personal *)
+val read_one_personal : Request.t -> Response.t Lwt.t
