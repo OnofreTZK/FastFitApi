@@ -47,10 +47,10 @@ val height : t -> float
 val weight : t -> float
 
 (* Retrieve the worksheet *)
-val worksheet : t -> Worksheet.t
+(*val worksheet : t -> Worksheet.t*)
 
 (* Query to insert a new user *)
 val insert : stored -> (module Rapper_helper.CONNECTION) -> (unit, [> Caqti_error.call_or_retrieve ]) result Lwt.t
 
-(* SELECT * FROM clients *)
-val read_all_clients : (module Rapper_helper.CONNECTION) -> (stored list, [> Caqti_error.call_or_retrieve ]) result Lwt.t
+(* Query to read all clients *)
+val read_all : (module Rapper_helper.CONNECTION) -> (t list, [> Caqti_error.call_or_retrieve ]) result Lwt.t

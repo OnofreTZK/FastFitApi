@@ -7,7 +7,7 @@ type t =
         password : string;
         height : float;
         weight : float;
-        worksheet: Worksheet.t
+        (*worksheet: Worksheet.t *)
     }[@@deriving yojson]
 
 type stored =
@@ -40,7 +40,7 @@ let t_of_posted usr =
         password=usr.posted_password;
         height=0.0;
         weight=0.0;
-        worksheet=Worksheet.empty ()
+        (*worksheet=Worksheet.empty () *)
     }
 
 let stored_of_t usr id =
@@ -65,7 +65,7 @@ let t_of_stored usr =
         password=usr.stored_password;
         height=0.0;
         weight=0.0;
-        worksheet=(Worksheet.empty ())
+        (*worksheet=(Worksheet.empty ())*)
     }
     
 
@@ -83,7 +83,7 @@ let height client = client.height
 
 let weight client = client.weight
 
-let worksheet client = client.worksheet
+(*let worksheet client = client.worksheet *)
 
 (* Queries *)
 (*************************************************************************************************)
@@ -104,9 +104,10 @@ let read_all =
     [%rapper
         get_many
             {sql|
-                SELECT @string{id}, @string{stored_name}, @string{stored_username}, @int{stored_age},
-                @string{stored_email}, @string{stored_password}, @float{stored_height}, 
-                @float{stored_weight};
+                SELECT @string{name}, @string{username}, @int{age},
+                @string{email}, @string{password}, @float{height}, 
+                @float{weight}
+                FROM clients;
             |sql}
             record_out]
             ()
