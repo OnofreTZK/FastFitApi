@@ -1,0 +1,4 @@
+(library
+ (name endpoints)
+ (libraries models dbcontroller opium unix)
+ (preprocess (pps ppx_deriving_yojson)))
