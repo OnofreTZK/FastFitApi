@@ -22,3 +22,9 @@ val read_all_personals : unit -> Personal.t list Lwt.t
 
 (* SELECT * FROM exercice *)
 val read_all_exercices : unit -> Exercice.t list Lwt.t
+
+(* SELECT name FROM clients  *)
+val read_one_client : string -> Client.t Lwt.t
+
+(* SELECT name FROM personal  *)
+val read_one_personal : string -> Personal.t Lwt.t

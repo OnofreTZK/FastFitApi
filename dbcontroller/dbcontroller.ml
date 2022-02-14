@@ -139,3 +139,17 @@ let read_all_exercices () =
     let* exercices = dispatch Exercice.read_all
     in
     exercices |> Lwt.return
+
+let read_one_client username_id =
+    let open Lwt.Syntax
+    in
+    let* client = dispatch (Client.read_one ~username_id)
+    in
+    client |> Lwt.return
+
+let read_one_personal username_id =
+    let open Lwt.Syntax
+    in
+    let* personal = dispatch (Personal.read_one ~username_id)
+    in
+    personal |> Lwt.return

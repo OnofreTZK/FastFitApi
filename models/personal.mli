@@ -47,3 +47,6 @@ val insert : stored -> (module Rapper_helper.CONNECTION) -> (unit, [> Caqti_erro
 
 (* Query to read all personals *)
 val read_all : (module Rapper_helper.CONNECTION) -> (t list, [> Caqti_error.call_or_retrieve ]) result Lwt.t
+
+(* Query to read one client *)
+val read_one : username_id:string -> (module Rapper_helper.CONNECTION) -> (t, [> Caqti_error.call_or_retrieve ]) result Lwt.t

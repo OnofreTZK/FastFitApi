@@ -95,3 +95,14 @@ let read_all =
             record_out]
             ()
 
+(* INSERT *)
+let read_one =
+    [%rapper
+        get_one
+            {sql|
+                SELECT @string{name}, @string{username}, @int{age},
+                @string{email}, @string{password}
+                FROM personal
+                WHERE username = %string{username_id};
+            |sql}
+            record_out]
