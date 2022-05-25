@@ -4,7 +4,7 @@ exception Query_failed of string
 
 (* Setup of database pool *)
 (* ********************************************************************************************* *)
-let connection_url = "postgresql://localhost:5432/fastfit?user=admin&password=123456TX&
+let connection_url = "postgresql://localhost:5431/fastfit?user=admin&password=supersecret&
                       ssl=false"
 
 (* Pool connection to the database *)

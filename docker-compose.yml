@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  db:
+    image: postgres:14
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: "supersecret"
+      POSTGRES_USER: "admin"
+      POSTGRES_DB: "fastfit"
+    ports:
+        - 5431:5432
