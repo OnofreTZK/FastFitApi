@@ -1,7 +1,0 @@
-version = "1.15.2"
-description = "SHA-1 and SHA-2 family implementations"
-requires = "stdlib-shims"
-archive(byte) = "sha.cma"
-archive(native) = "sha.cmxa"
-plugin(byte) = "sha.cma"
-plugin(native) = "sha.cmxs"

@@ -1,4 +1,0 @@
-(library
- (name opium_testing)
- (public_name opium-testing)
- (libraries str opium lwt alcotest alcotest-lwt))

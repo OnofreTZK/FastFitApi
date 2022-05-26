@@ -1,5 +1,0 @@
-(library
- (name examples_lwt)
- (libraries lwt ppx_rapper_lwt)
- (preprocess
-  (pps ppx_rapper)))

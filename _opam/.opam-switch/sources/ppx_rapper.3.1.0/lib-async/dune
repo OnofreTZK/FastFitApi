@@ -1,5 +1,0 @@
-(library
- (name ppx_rapper_async)
- (public_name ppx_rapper_async)
- (wrapped false)
- (libraries async ppx_rapper.runtime caqti-async caqti))

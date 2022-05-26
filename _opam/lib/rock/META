@@ -1,7 +1,0 @@
-version = "0.20.0"
-description = ""
-requires = "bigstringaf hmap httpaf lwt sexplib0"
-archive(byte) = "rock.cma"
-archive(native) = "rock.cmxa"
-plugin(byte) = "rock.cma"
-plugin(native) = "rock.cmxs"

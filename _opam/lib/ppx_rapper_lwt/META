@@ -1,7 +1,0 @@
-version = "3.1.0"
-description = ""
-requires = "caqti caqti-lwt lwt ppx_rapper.runtime"
-archive(byte) = "ppx_rapper_lwt.cma"
-archive(native) = "ppx_rapper_lwt.cmxa"
-plugin(byte) = "ppx_rapper_lwt.cma"
-plugin(native) = "ppx_rapper_lwt.cmxs"

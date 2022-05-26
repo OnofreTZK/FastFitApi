@@ -1,7 +1,0 @@
-version = "5.0.0"
-description = ""
-requires = "bigarray threads"
-archive(byte) = "postgresql.cma"
-archive(native) = "postgresql.cmxa"
-plugin(byte) = "postgresql.cma"
-plugin(native) = "postgresql.cmxs"

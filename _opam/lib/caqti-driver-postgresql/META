@@ -1,7 +1,0 @@
-version = "1.8.0"
-description = ""
-requires = "caqti postgresql"
-archive(byte) = "caqti_driver_postgresql.cma"
-archive(native) = "caqti_driver_postgresql.cmxa"
-plugin(byte) = "caqti_driver_postgresql.cma"
-plugin(native) = "caqti_driver_postgresql.cmxs"
