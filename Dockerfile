@@ -2,7 +2,7 @@
 # docker build -t fasfit:latest -f Dockerfile .
 
 # ========================================================
-FROM ocamlpro/ocaml AS build-env
+FROM ocamlpro/ocaml
 WORKDIR /app
 
 # Copy main project
@@ -11,12 +11,12 @@ COPY . .
 # Setting up
 RUN opam update
 RUN opam switch create 4.13.1
-RUN opam install dune
 RUN eval $(opam env --switch=4.13.1)
 RUN opam upgrade
 RUN opam pin add fastfit . -n 
 RUN opam depext --install fastfit
 RUN eval $(opam env)
+RUN opam build
 
 ENV USER=docker
 ENV UID=12345
@@ -32,7 +32,8 @@ RUN sudo adduser \
     "$USER"
 
 RUN sudo chown -R $USER:$USER /app
-RUN sudo chmod 755 ./entrypoint.sh
+#RUN sudo chmod 755 ./entrypoint.sh
+#RUN dune build
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["./_build/default/bin/main.exe"]
 #CMD ["./entrypoint.sh"]

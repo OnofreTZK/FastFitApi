@@ -1,0 +1,35 @@
+(lang dune 3.2)
+(name ppx_rapper_lwt)
+(version 3.1.0)
+(sections (lib .) (libexec .) (doc ../../doc/ppx_rapper_lwt))
+(files
+ (lib
+  (META
+   dune-package
+   opam
+   ppx_rapper_lwt.a
+   ppx_rapper_lwt.cma
+   ppx_rapper_lwt.cmxa
+   rapper_helper.cmi
+   rapper_helper.cmt
+   rapper_helper.cmti
+   rapper_helper.cmx
+   rapper_helper.ml
+   rapper_helper.mli))
+ (libexec (ppx_rapper_lwt.cmxs))
+ (doc (CHANGES.md LICENSE README.md)))
+(library
+ (name ppx_rapper_lwt)
+ (kind normal)
+ (archives (byte ppx_rapper_lwt.cma) (native ppx_rapper_lwt.cmxa))
+ (plugins (byte ppx_rapper_lwt.cma) (native ppx_rapper_lwt.cmxs))
+ (native_archives ppx_rapper_lwt.a)
+ (requires lwt ppx_rapper.runtime caqti-lwt caqti)
+ (modes byte native)
+ (modules
+  (singleton
+   (name Rapper_helper)
+   (obj_name rapper_helper)
+   (visibility public)
+   (impl)
+   (intf))))

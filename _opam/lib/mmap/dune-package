@@ -1,0 +1,31 @@
+(lang dune 3.2)
+(name mmap)
+(version 1.2.0)
+(sections (lib .) (libexec .) (doc ../../doc/mmap))
+(files
+ (lib
+  (META
+   dune-package
+   mmap.a
+   mmap.cma
+   mmap.cmi
+   mmap.cmt
+   mmap.cmti
+   mmap.cmx
+   mmap.cmxa
+   mmap.ml
+   mmap.mli
+   opam))
+ (libexec (mmap.cmxs))
+ (doc (CHANGES.md LICENSE README.md)))
+(library
+ (name mmap)
+ (kind normal)
+ (archives (byte mmap.cma) (native mmap.cmxa))
+ (plugins (byte mmap.cma) (native mmap.cmxs))
+ (native_archives mmap.a)
+ (requires unix bigarray-compat)
+ (main_module_name Mmap)
+ (modes byte native)
+ (modules
+  (singleton (name Mmap) (obj_name mmap) (visibility public) (impl) (intf))))

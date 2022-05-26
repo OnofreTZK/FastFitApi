@@ -1,0 +1,7 @@
+version = "1.8.0"
+description = ""
+requires = "caqti logs logs.lwt lwt lwt.unix"
+archive(byte) = "caqti_lwt.cma"
+archive(native) = "caqti_lwt.cmxa"
+plugin(byte) = "caqti_lwt.cma"
+plugin(native) = "caqti_lwt.cmxs"

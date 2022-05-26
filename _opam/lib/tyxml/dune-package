@@ -1,0 +1,126 @@
+(lang dune 3.2)
+(name tyxml)
+(version 4.5.0)
+(sections (lib .) (libexec .) (doc ../../doc/tyxml))
+(files
+ (lib
+  (META
+   dune-package
+   functor/html_f.cmi
+   functor/html_f.cmt
+   functor/html_f.cmti
+   functor/html_f.cmx
+   functor/html_f.ml
+   functor/html_f.mli
+   functor/html_sigs.cmi
+   functor/html_sigs.cmti
+   functor/html_sigs.mli
+   functor/html_types.cmi
+   functor/html_types.cmti
+   functor/html_types.mli
+   functor/svg_f.cmi
+   functor/svg_f.cmt
+   functor/svg_f.cmti
+   functor/svg_f.cmx
+   functor/svg_f.ml
+   functor/svg_f.mli
+   functor/svg_sigs.cmi
+   functor/svg_sigs.cmti
+   functor/svg_sigs.mli
+   functor/svg_types.cmi
+   functor/svg_types.cmti
+   functor/svg_types.mli
+   functor/tyxml_f.a
+   functor/tyxml_f.cma
+   functor/tyxml_f.cmxa
+   functor/xml_iter.cmi
+   functor/xml_iter.cmt
+   functor/xml_iter.cmti
+   functor/xml_iter.cmx
+   functor/xml_iter.ml
+   functor/xml_iter.mli
+   functor/xml_print.cmi
+   functor/xml_print.cmt
+   functor/xml_print.cmti
+   functor/xml_print.cmx
+   functor/xml_print.ml
+   functor/xml_print.mli
+   functor/xml_sigs.cmi
+   functor/xml_sigs.cmti
+   functor/xml_sigs.mli
+   functor/xml_stream.cmi
+   functor/xml_stream.cmt
+   functor/xml_stream.cmti
+   functor/xml_stream.cmx
+   functor/xml_stream.ml
+   functor/xml_stream.mli
+   functor/xml_wrap.cmi
+   functor/xml_wrap.cmt
+   functor/xml_wrap.cmti
+   functor/xml_wrap.cmx
+   functor/xml_wrap.ml
+   functor/xml_wrap.mli
+   opam
+   tyxml.a
+   tyxml.cma
+   tyxml.cmi
+   tyxml.cmt
+   tyxml.cmx
+   tyxml.cmxa
+   tyxml.ml
+   tyxml_html.cmi
+   tyxml_html.cmt
+   tyxml_html.cmti
+   tyxml_html.cmx
+   tyxml_html.ml
+   tyxml_html.mli
+   tyxml_svg.cmi
+   tyxml_svg.cmt
+   tyxml_svg.cmti
+   tyxml_svg.cmx
+   tyxml_svg.ml
+   tyxml_svg.mli
+   tyxml_xml.cmi
+   tyxml_xml.cmt
+   tyxml_xml.cmti
+   tyxml_xml.cmx
+   tyxml_xml.ml
+   tyxml_xml.mli))
+ (libexec (functor/tyxml_f.cmxs tyxml.cmxs))
+ (doc (CHANGES.md LICENSE README.md)))
+(library
+ (name tyxml)
+ (kind normal)
+ (archives (byte tyxml.cma) (native tyxml.cmxa))
+ (plugins (byte tyxml.cma) (native tyxml.cmxs))
+ (native_archives tyxml.a)
+ (requires tyxml.functor re uutf)
+ (modes byte native)
+ (modules
+  (unwrapped
+   ((name Tyxml) (obj_name tyxml) (visibility public) (impl))
+   ((name Tyxml_html) (obj_name tyxml_html) (visibility public) (impl) (intf))
+   ((name Tyxml_svg) (obj_name tyxml_svg) (visibility public) (impl) (intf))
+   ((name Tyxml_xml) (obj_name tyxml_xml) (visibility public) (impl) (intf)))))
+(library
+ (name tyxml.functor)
+ (kind normal)
+ (synopsis "Statically correct HTML and SVG documents (Functor version)")
+ (archives (byte functor/tyxml_f.cma) (native functor/tyxml_f.cmxa))
+ (plugins (byte functor/tyxml_f.cma) (native functor/tyxml_f.cmxs))
+ (native_archives functor/tyxml_f.a)
+ (requires uutf re seq)
+ (modes byte native)
+ (modules
+  (unwrapped
+   ((name Html_f) (obj_name html_f) (visibility public) (impl) (intf))
+   ((name Html_sigs) (obj_name html_sigs) (visibility public) (intf))
+   ((name Html_types) (obj_name html_types) (visibility public) (intf))
+   ((name Svg_f) (obj_name svg_f) (visibility public) (impl) (intf))
+   ((name Svg_sigs) (obj_name svg_sigs) (visibility public) (intf))
+   ((name Svg_types) (obj_name svg_types) (visibility public) (intf))
+   ((name Xml_iter) (obj_name xml_iter) (visibility public) (impl) (intf))
+   ((name Xml_print) (obj_name xml_print) (visibility public) (impl) (intf))
+   ((name Xml_sigs) (obj_name xml_sigs) (visibility public) (intf))
+   ((name Xml_stream) (obj_name xml_stream) (visibility public) (impl) (intf))
+   ((name Xml_wrap) (obj_name xml_wrap) (visibility public) (impl) (intf)))))

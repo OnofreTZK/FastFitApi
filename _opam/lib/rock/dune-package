@@ -1,0 +1,143 @@
+(lang dune 3.2)
+(name rock)
+(version 0.20.0)
+(sections (lib .) (libexec .) (doc ../../doc/rock))
+(files
+ (lib
+  (META
+   app.ml
+   app.mli
+   body.ml
+   body.mli
+   context.ml
+   context.mli
+   dune-package
+   filter.ml
+   filter.mli
+   handler.ml
+   handler.mli
+   middleware.ml
+   middleware.mli
+   opam
+   request.ml
+   request.mli
+   response.ml
+   response.mli
+   rock.a
+   rock.cma
+   rock.cmi
+   rock.cmt
+   rock.cmti
+   rock.cmx
+   rock.cmxa
+   rock.ml
+   rock.mli
+   rock__.cmi
+   rock__.cmt
+   rock__.cmx
+   rock__.ml
+   rock__App.cmi
+   rock__App.cmt
+   rock__App.cmti
+   rock__App.cmx
+   rock__Body.cmi
+   rock__Body.cmt
+   rock__Body.cmti
+   rock__Body.cmx
+   rock__Context.cmi
+   rock__Context.cmt
+   rock__Context.cmti
+   rock__Context.cmx
+   rock__Filter.cmi
+   rock__Filter.cmt
+   rock__Filter.cmti
+   rock__Filter.cmx
+   rock__Handler.cmi
+   rock__Handler.cmt
+   rock__Handler.cmti
+   rock__Handler.cmx
+   rock__Middleware.cmi
+   rock__Middleware.cmt
+   rock__Middleware.cmti
+   rock__Middleware.cmx
+   rock__Request.cmi
+   rock__Request.cmt
+   rock__Request.cmti
+   rock__Request.cmx
+   rock__Response.cmi
+   rock__Response.cmt
+   rock__Response.cmti
+   rock__Response.cmx
+   rock__Server_connection.cmi
+   rock__Server_connection.cmt
+   rock__Server_connection.cmti
+   rock__Server_connection.cmx
+   rock__Service.cmi
+   rock__Service.cmt
+   rock__Service.cmti
+   rock__Service.cmx
+   server_connection.ml
+   server_connection.mli
+   service.ml
+   service.mli))
+ (libexec (rock.cmxs))
+ (doc (CHANGES.md LICENSE README.cpp.md README.md odoc-pages/index.mld)))
+(library
+ (name rock)
+ (kind normal)
+ (archives (byte rock.cma) (native rock.cmxa))
+ (plugins (byte rock.cma) (native rock.cmxs))
+ (native_archives rock.a)
+ (requires bigstringaf hmap httpaf lwt sexplib0)
+ (main_module_name Rock)
+ (modes byte native)
+ (modules
+  (wrapped
+   (main_module_name Rock)
+   (modules
+    ((name App) (obj_name rock__App) (visibility public) (impl) (intf))
+    ((name Body) (obj_name rock__Body) (visibility public) (impl) (intf))
+    ((name Context)
+     (obj_name rock__Context)
+     (visibility public)
+     (impl)
+     (intf))
+    ((name Filter) (obj_name rock__Filter) (visibility public) (impl) (intf))
+    ((name Handler)
+     (obj_name rock__Handler)
+     (visibility public)
+     (impl)
+     (intf))
+    ((name Middleware)
+     (obj_name rock__Middleware)
+     (visibility public)
+     (impl)
+     (intf))
+    ((name Request)
+     (obj_name rock__Request)
+     (visibility public)
+     (impl)
+     (intf))
+    ((name Response)
+     (obj_name rock__Response)
+     (visibility public)
+     (impl)
+     (intf))
+    ((name Rock) (obj_name rock) (visibility public) (impl) (intf))
+    ((name Server_connection)
+     (obj_name rock__Server_connection)
+     (visibility public)
+     (impl)
+     (intf))
+    ((name Service)
+     (obj_name rock__Service)
+     (visibility public)
+     (impl)
+     (intf)))
+   (alias_module
+    (name Rock__)
+    (obj_name rock__)
+    (visibility public)
+    (kind alias)
+    (impl))
+   (wrapped true))))

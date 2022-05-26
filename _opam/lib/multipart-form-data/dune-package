@@ -1,0 +1,35 @@
+(lang dune 3.2)
+(name multipart-form-data)
+(sections (lib .) (libexec .) (doc ../../doc/multipart-form-data))
+(files
+ (lib
+  (META
+   dune-package
+   multipart_form_data.a
+   multipart_form_data.cma
+   multipart_form_data.cmi
+   multipart_form_data.cmt
+   multipart_form_data.cmti
+   multipart_form_data.cmx
+   multipart_form_data.cmxa
+   multipart_form_data.ml
+   multipart_form_data.mli
+   opam))
+ (libexec (multipart_form_data.cmxs))
+ (doc (CHANGES.md LICENSE.md README.md)))
+(library
+ (name multipart-form-data)
+ (kind normal)
+ (archives (byte multipart_form_data.cma) (native multipart_form_data.cmxa))
+ (plugins (byte multipart_form_data.cma) (native multipart_form_data.cmxs))
+ (native_archives multipart_form_data.a)
+ (requires lwt stringext)
+ (main_module_name Multipart_form_data)
+ (modes byte native)
+ (modules
+  (singleton
+   (name Multipart_form_data)
+   (obj_name multipart_form_data)
+   (visibility public)
+   (impl)
+   (intf))))

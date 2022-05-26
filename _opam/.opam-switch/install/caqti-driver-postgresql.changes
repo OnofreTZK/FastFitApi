@@ -1,0 +1,30 @@
+opam-version: "2.0"
+added: [
+  "doc/caqti-driver-postgresql" {"D"}
+  "doc/caqti-driver-postgresql/CHANGES.md" {"F:S13545T1653572957.43"}
+  "doc/caqti-driver-postgresql/README.md" {"F:S4846T1653572957.43"}
+  "lib/caqti-driver-postgresql" {"D"}
+  "lib/caqti-driver-postgresql/META" {"F:S252T1653572957.42"}
+  "lib/caqti-driver-postgresql/caqti_driver_postgresql.a"
+    {"F:S199108T1653572957.43"}
+  "lib/caqti-driver-postgresql/caqti_driver_postgresql.cma"
+    {"F:S268921T1653572957.43"}
+  "lib/caqti-driver-postgresql/caqti_driver_postgresql.cmi"
+    {"F:S1528T1653572957.43"}
+  "lib/caqti-driver-postgresql/caqti_driver_postgresql.cmt"
+    {"F:S562640T1653572957.43"}
+  "lib/caqti-driver-postgresql/caqti_driver_postgresql.cmti"
+    {"F:S10578T1653572957.43"}
+  "lib/caqti-driver-postgresql/caqti_driver_postgresql.cmx"
+    {"F:S12100T1653572957.43"}
+  "lib/caqti-driver-postgresql/caqti_driver_postgresql.cmxa"
+    {"F:S2486T1653572957.43"}
+  "lib/caqti-driver-postgresql/caqti_driver_postgresql.cmxs"
+    {"F:S215824T1653572957.43"}
+  "lib/caqti-driver-postgresql/caqti_driver_postgresql.ml"
+    {"F:S36997T1653572957.43"}
+  "lib/caqti-driver-postgresql/caqti_driver_postgresql.mli"
+    {"F:S2697T1653572957.43"}
+  "lib/caqti-driver-postgresql/dune-package" {"F:S1001T1653572957.43"}
+  "lib/caqti-driver-postgresql/opam" {"F:S862T1653572957.43"}
+]

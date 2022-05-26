@@ -1,0 +1,84 @@
+(lang dune 3.2)
+(name ppx_rapper)
+(version 3.1.0)
+(sections (lib .) (libexec .) (doc ../../doc/ppx_rapper))
+(files
+ (lib
+  (META
+   codegen.ml
+   dune-package
+   opam
+   ppx_rapper.a
+   ppx_rapper.cma
+   ppx_rapper.cmi
+   ppx_rapper.cmt
+   ppx_rapper.cmx
+   ppx_rapper.cmxa
+   ppx_rapper.ml
+   ppx_rapper__.cmi
+   ppx_rapper__.cmt
+   ppx_rapper__.cmx
+   ppx_rapper__.ml
+   ppx_rapper__Codegen.cmi
+   ppx_rapper__Codegen.cmt
+   ppx_rapper__Codegen.cmx
+   ppx_rapper__Query.cmi
+   ppx_rapper__Query.cmt
+   ppx_rapper__Query.cmti
+   ppx_rapper__Query.cmx
+   query.ml
+   query.mli
+   runtime/rapper.a
+   runtime/rapper.cma
+   runtime/rapper.cmi
+   runtime/rapper.cmt
+   runtime/rapper.cmti
+   runtime/rapper.cmx
+   runtime/rapper.cmxa
+   runtime/rapper.ml
+   runtime/rapper.mli))
+ (libexec (ppx.exe ppx_rapper.cmxs runtime/rapper.cmxs))
+ (doc (CHANGES.md LICENSE README.md)))
+(library
+ (name ppx_rapper)
+ (kind ppx_rewriter)
+ (archives (byte ppx_rapper.cma) (native ppx_rapper.cmxa))
+ (plugins (byte ppx_rapper.cma) (native ppx_rapper.cmxs))
+ (native_archives ppx_rapper.a)
+ (requires ppxlib.ast ppxlib pg_query base)
+ (main_module_name Ppx_rapper)
+ (modes byte native)
+ (modules
+  (wrapped
+   (main_module_name Ppx_rapper)
+   (modules
+    ((name Codegen) (obj_name ppx_rapper__Codegen) (visibility public) (impl))
+    ((name Ppx_rapper) (obj_name ppx_rapper) (visibility public) (impl))
+    ((name Query)
+     (obj_name ppx_rapper__Query)
+     (visibility public)
+     (impl)
+     (intf)))
+   (alias_module
+    (name Ppx_rapper__)
+    (obj_name ppx_rapper__)
+    (visibility public)
+    (kind alias)
+    (impl))
+   (wrapped true))))
+(library
+ (name ppx_rapper.runtime)
+ (kind normal)
+ (archives (byte runtime/rapper.cma) (native runtime/rapper.cmxa))
+ (plugins (byte runtime/rapper.cma) (native runtime/rapper.cmxs))
+ (native_archives runtime/rapper.a)
+ (requires caqti)
+ (main_module_name Rapper)
+ (modes byte native)
+ (modules
+  (singleton
+   (name Rapper)
+   (obj_name rapper)
+   (visibility public)
+   (impl)
+   (intf))))

@@ -1,0 +1,267 @@
+(lang dune 3.2)
+(name re)
+(version 1.10.4)
+(sections (lib .) (libexec .) (doc ../../doc/re))
+(files
+ (lib
+  (META
+   automata.ml
+   automata.mli
+   category.ml
+   category.mli
+   color_map.ml
+   color_map.mli
+   core.ml
+   core.mli
+   cset.ml
+   cset.mli
+   dune-package
+   emacs.ml
+   emacs.mli
+   emacs/re_emacs.a
+   emacs/re_emacs.cma
+   emacs/re_emacs.cmi
+   emacs/re_emacs.cmt
+   emacs/re_emacs.cmx
+   emacs/re_emacs.cmxa
+   emacs/re_emacs.ml
+   fmt.ml
+   glob.ml
+   glob.mli
+   glob/re_glob.a
+   glob/re_glob.cma
+   glob/re_glob.cmi
+   glob/re_glob.cmt
+   glob/re_glob.cmx
+   glob/re_glob.cmxa
+   glob/re_glob.ml
+   group.ml
+   group.mli
+   opam
+   pcre.ml
+   pcre.mli
+   pcre/re_pcre.a
+   pcre/re_pcre.cma
+   pcre/re_pcre.cmi
+   pcre/re_pcre.cmt
+   pcre/re_pcre.cmx
+   pcre/re_pcre.cmxa
+   pcre/re_pcre.ml
+   perl.ml
+   perl.mli
+   perl/re_perl.a
+   perl/re_perl.cma
+   perl/re_perl.cmi
+   perl/re_perl.cmt
+   perl/re_perl.cmx
+   perl/re_perl.cmxa
+   perl/re_perl.ml
+   pmark.ml
+   pmark.mli
+   posix.ml
+   posix.mli
+   posix/re_posix.a
+   posix/re_posix.cma
+   posix/re_posix.cmi
+   posix/re_posix.cmt
+   posix/re_posix.cmx
+   posix/re_posix.cmxa
+   posix/re_posix.ml
+   re.a
+   re.cma
+   re.cmi
+   re.cmt
+   re.cmx
+   re.cmxa
+   re.ml
+   re__.cmi
+   re__.cmt
+   re__.cmx
+   re__.ml
+   re__Automata.cmi
+   re__Automata.cmt
+   re__Automata.cmti
+   re__Automata.cmx
+   re__Category.cmi
+   re__Category.cmt
+   re__Category.cmti
+   re__Category.cmx
+   re__Color_map.cmi
+   re__Color_map.cmt
+   re__Color_map.cmti
+   re__Color_map.cmx
+   re__Core.cmi
+   re__Core.cmt
+   re__Core.cmti
+   re__Core.cmx
+   re__Cset.cmi
+   re__Cset.cmt
+   re__Cset.cmti
+   re__Cset.cmx
+   re__Emacs.cmi
+   re__Emacs.cmt
+   re__Emacs.cmti
+   re__Emacs.cmx
+   re__Fmt.cmi
+   re__Fmt.cmt
+   re__Fmt.cmx
+   re__Glob.cmi
+   re__Glob.cmt
+   re__Glob.cmti
+   re__Glob.cmx
+   re__Group.cmi
+   re__Group.cmt
+   re__Group.cmti
+   re__Group.cmx
+   re__Pcre.cmi
+   re__Pcre.cmt
+   re__Pcre.cmti
+   re__Pcre.cmx
+   re__Perl.cmi
+   re__Perl.cmt
+   re__Perl.cmti
+   re__Perl.cmx
+   re__Pmark.cmi
+   re__Pmark.cmt
+   re__Pmark.cmti
+   re__Pmark.cmx
+   re__Posix.cmi
+   re__Posix.cmt
+   re__Posix.cmti
+   re__Posix.cmx
+   re__Str.cmi
+   re__Str.cmt
+   re__Str.cmti
+   re__Str.cmx
+   str.ml
+   str.mli
+   str/re_str.a
+   str/re_str.cma
+   str/re_str.cmi
+   str/re_str.cmt
+   str/re_str.cmx
+   str/re_str.cmxa
+   str/re_str.ml))
+ (libexec
+  (emacs/re_emacs.cmxs
+   glob/re_glob.cmxs
+   pcre/re_pcre.cmxs
+   perl/re_perl.cmxs
+   posix/re_posix.cmxs
+   re.cmxs
+   str/re_str.cmxs))
+ (doc (CHANGES.md LICENSE.md README.md)))
+(library
+ (name re)
+ (kind normal)
+ (synopsis "Pure OCaml regular expression library")
+ (archives (byte re.cma) (native re.cmxa))
+ (plugins (byte re.cma) (native re.cmxs))
+ (native_archives re.a)
+ (requires seq)
+ (main_module_name Re)
+ (modes byte native)
+ (modules
+  (wrapped
+   (main_module_name Re)
+   (modules
+    ((name Automata)
+     (obj_name re__Automata)
+     (visibility public)
+     (impl)
+     (intf))
+    ((name Category)
+     (obj_name re__Category)
+     (visibility public)
+     (impl)
+     (intf))
+    ((name Color_map)
+     (obj_name re__Color_map)
+     (visibility public)
+     (impl)
+     (intf))
+    ((name Core) (obj_name re__Core) (visibility public) (impl) (intf))
+    ((name Cset) (obj_name re__Cset) (visibility public) (impl) (intf))
+    ((name Emacs) (obj_name re__Emacs) (visibility public) (impl) (intf))
+    ((name Fmt) (obj_name re__Fmt) (visibility public) (impl))
+    ((name Glob) (obj_name re__Glob) (visibility public) (impl) (intf))
+    ((name Group) (obj_name re__Group) (visibility public) (impl) (intf))
+    ((name Pcre) (obj_name re__Pcre) (visibility public) (impl) (intf))
+    ((name Perl) (obj_name re__Perl) (visibility public) (impl) (intf))
+    ((name Pmark) (obj_name re__Pmark) (visibility public) (impl) (intf))
+    ((name Posix) (obj_name re__Posix) (visibility public) (impl) (intf))
+    ((name Re) (obj_name re) (visibility public) (impl))
+    ((name Str) (obj_name re__Str) (visibility public) (impl) (intf)))
+   (alias_module
+    (name Re__)
+    (obj_name re__)
+    (visibility public)
+    (kind alias)
+    (impl))
+   (wrapped true))))
+(library
+ (name re.emacs)
+ (kind normal)
+ (synopsis "Deprecated. Use Re.Emacs")
+ (archives (byte emacs/re_emacs.cma) (native emacs/re_emacs.cmxa))
+ (plugins (byte emacs/re_emacs.cma) (native emacs/re_emacs.cmxs))
+ (native_archives emacs/re_emacs.a)
+ (requires re)
+ (modes byte native)
+ (modules
+  (singleton (name Re_emacs) (obj_name re_emacs) (visibility public) (impl))))
+(library
+ (name re.glob)
+ (kind normal)
+ (synopsis "Deprecated. Use Re.Glob")
+ (archives (byte glob/re_glob.cma) (native glob/re_glob.cmxa))
+ (plugins (byte glob/re_glob.cma) (native glob/re_glob.cmxs))
+ (native_archives glob/re_glob.a)
+ (requires re)
+ (modes byte native)
+ (modules
+  (singleton (name Re_glob) (obj_name re_glob) (visibility public) (impl))))
+(library
+ (name re.pcre)
+ (kind normal)
+ (synopsis "Deprecated. Use Re.Pcre")
+ (archives (byte pcre/re_pcre.cma) (native pcre/re_pcre.cmxa))
+ (plugins (byte pcre/re_pcre.cma) (native pcre/re_pcre.cmxs))
+ (native_archives pcre/re_pcre.a)
+ (requires re)
+ (modes byte native)
+ (modules
+  (singleton (name Re_pcre) (obj_name re_pcre) (visibility public) (impl))))
+(library
+ (name re.perl)
+ (kind normal)
+ (synopsis "Deprecated. Use Re.Perl")
+ (archives (byte perl/re_perl.cma) (native perl/re_perl.cmxa))
+ (plugins (byte perl/re_perl.cma) (native perl/re_perl.cmxs))
+ (native_archives perl/re_perl.a)
+ (requires re)
+ (modes byte native)
+ (modules
+  (singleton (name Re_perl) (obj_name re_perl) (visibility public) (impl))))
+(library
+ (name re.posix)
+ (kind normal)
+ (synopsis "Deprecated. Use Re.Posix")
+ (archives (byte posix/re_posix.cma) (native posix/re_posix.cmxa))
+ (plugins (byte posix/re_posix.cma) (native posix/re_posix.cmxs))
+ (native_archives posix/re_posix.a)
+ (requires re)
+ (modes byte native)
+ (modules
+  (singleton (name Re_posix) (obj_name re_posix) (visibility public) (impl))))
+(library
+ (name re.str)
+ (kind normal)
+ (synopsis "Deprecated. Use Re.Str")
+ (archives (byte str/re_str.cma) (native str/re_str.cmxa))
+ (plugins (byte str/re_str.cma) (native str/re_str.cmxs))
+ (native_archives str/re_str.a)
+ (requires re)
+ (modes byte native)
+ (modules
+  (singleton (name Re_str) (obj_name re_str) (visibility public) (impl))))

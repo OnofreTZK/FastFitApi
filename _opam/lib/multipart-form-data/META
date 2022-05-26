@@ -1,0 +1,6 @@
+description = ""
+requires = "lwt stringext"
+archive(byte) = "multipart_form_data.cma"
+archive(native) = "multipart_form_data.cmxa"
+plugin(byte) = "multipart_form_data.cma"
+plugin(native) = "multipart_form_data.cmxs"

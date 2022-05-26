@@ -1,0 +1,4 @@
+(test
+ (name main)
+ (package caqti)
+ (libraries alcotest caqti re.pcre))

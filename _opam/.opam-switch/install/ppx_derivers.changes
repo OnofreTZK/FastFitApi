@@ -1,0 +1,21 @@
+opam-version: "2.0"
+added: [
+  "doc/ppx_derivers" {"D"}
+  "doc/ppx_derivers/CHANGES.md" {"F:S136T1653572938.15"}
+  "doc/ppx_derivers/LICENSE.md" {"F:S1518T1653572938.15"}
+  "doc/ppx_derivers/README.md" {"F:S360T1653572938.15"}
+  "lib/ppx_derivers" {"D"}
+  "lib/ppx_derivers/META" {"F:S174T1653572938.15"}
+  "lib/ppx_derivers/dune-package" {"F:S772T1653572938.15"}
+  "lib/ppx_derivers/opam" {"F:S616T1653572938.15"}
+  "lib/ppx_derivers/ppx_derivers.a" {"F:S7498T1653572938.15"}
+  "lib/ppx_derivers/ppx_derivers.cma" {"F:S5027T1653572938.15"}
+  "lib/ppx_derivers/ppx_derivers.cmi" {"F:S649T1653572938.15"}
+  "lib/ppx_derivers/ppx_derivers.cmt" {"F:S10384T1653572938.15"}
+  "lib/ppx_derivers/ppx_derivers.cmti" {"F:S5115T1653572938.15"}
+  "lib/ppx_derivers/ppx_derivers.cmx" {"F:S580T1653572938.15"}
+  "lib/ppx_derivers/ppx_derivers.cmxa" {"F:S455T1653572938.15"}
+  "lib/ppx_derivers/ppx_derivers.cmxs" {"F:S24488T1653572938.15"}
+  "lib/ppx_derivers/ppx_derivers.ml" {"F:S418T1653572938.15"}
+  "lib/ppx_derivers/ppx_derivers.mli" {"F:S575T1653572938.15"}
+]

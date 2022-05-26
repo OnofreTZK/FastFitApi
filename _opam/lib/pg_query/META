@@ -1,0 +1,7 @@
+version = "0.9.7"
+description = ""
+requires = "ctypes ctypes.foreign ppx_deriving.runtime"
+archive(byte) = ""
+archive(native) = "pg_query.cmxa"
+plugin(byte) = ""
+plugin(native) = "pg_query.cmxs"

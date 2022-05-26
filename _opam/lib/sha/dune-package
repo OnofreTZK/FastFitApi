@@ -1,0 +1,54 @@
+(lang dune 3.2)
+(name sha)
+(version 1.15.2)
+(sections
+ (lib /home/onofre/College/MOBILE/fasfitapi/_opam/lib/sha)
+ (libexec /home/onofre/College/MOBILE/fasfitapi/_opam/lib/sha)
+ (doc /home/onofre/College/MOBILE/fasfitapi/_opam/doc/sha)
+ (stublibs /home/onofre/College/MOBILE/fasfitapi/_opam/lib/stublibs))
+(files
+ (lib
+  (META
+   dune-package
+   libsha_stubs.a
+   opam
+   sha.a
+   sha.cma
+   sha.cmxa
+   sha1.cmi
+   sha1.cmt
+   sha1.cmti
+   sha1.cmx
+   sha1.ml
+   sha1.mli
+   sha256.cmi
+   sha256.cmt
+   sha256.cmti
+   sha256.cmx
+   sha256.ml
+   sha256.mli
+   sha512.cmi
+   sha512.cmt
+   sha512.cmti
+   sha512.cmx
+   sha512.ml
+   sha512.mli))
+ (libexec (sha.cmxs))
+ (doc (CHANGES.md LICENSE.md README.md))
+ (stublibs (dllsha_stubs.so)))
+(library
+ (name sha)
+ (kind normal)
+ (synopsis "SHA-1 and SHA-2 family implementations")
+ (archives (byte sha.cma) (native sha.cmxa))
+ (plugins (byte sha.cma) (native sha.cmxs))
+ (foreign_objects sha1_stubs.o sha256_stubs.o sha512_stubs.o)
+ (foreign_archives libsha_stubs.a)
+ (native_archives sha.a)
+ (requires stdlib-shims)
+ (modes byte native)
+ (modules
+  (unwrapped
+   ((name Sha1) (obj_name sha1) (visibility public) (impl) (intf))
+   ((name Sha256) (obj_name sha256) (visibility public) (impl) (intf))
+   ((name Sha512) (obj_name sha512) (visibility public) (impl) (intf)))))

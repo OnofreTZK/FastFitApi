@@ -1,0 +1,37 @@
+opam-version: "2.0"
+added: [
+  "doc/cmdliner" {"D"}
+  "doc/cmdliner/CHANGES.md" {"F:S17108T1653572930.82"}
+  "doc/cmdliner/LICENSE.md" {"F:S742T1653572930.82"}
+  "doc/cmdliner/README.md" {"F:S1633T1653572930.82"}
+  "doc/cmdliner/odoc-pages" {"D"}
+  "doc/cmdliner/odoc-pages/cli.mld" {"F:S4524T1653572930.82"}
+  "doc/cmdliner/odoc-pages/examples.mld" {"F:S15296T1653572930.82"}
+  "doc/cmdliner/odoc-pages/index.mld" {"F:S1205T1653572930.82"}
+  "doc/cmdliner/odoc-pages/tool_man.mld" {"F:S3274T1653572930.82"}
+  "doc/cmdliner/odoc-pages/tutorial.mld" {"F:S5870T1653572930.82"}
+  "lib/cmdliner" {"D"}
+  "lib/cmdliner/META" {"F:S226T1653572930.76"}
+  "lib/cmdliner/cmdliner.a" {"F:S563904T1653572930.77"}
+  "lib/cmdliner/cmdliner.cma" {"F:S731115T1653572930.77"}
+  "lib/cmdliner/cmdliner.cmi" {"F:S30061T1653572930.77"}
+  "lib/cmdliner/cmdliner.cmti" {"F:S205295T1653572930.77"}
+  "lib/cmdliner/cmdliner.cmx" {"F:S16491T1653572930.77"}
+  "lib/cmdliner/cmdliner.cmxa" {"F:S12335T1653572930.77"}
+  "lib/cmdliner/cmdliner.cmxs" {"F:S543568T1653572930.77"}
+  "lib/cmdliner/cmdliner.mli" {"F:S49313T1653572930.76"}
+  "lib/cmdliner/cmdliner_arg.cmx" {"F:S9211T1653572930.77"}
+  "lib/cmdliner/cmdliner_base.cmx" {"F:S7262T1653572930.77"}
+  "lib/cmdliner/cmdliner_cline.cmx" {"F:S4546T1653572930.77"}
+  "lib/cmdliner/cmdliner_cmd.cmx" {"F:S1968T1653572930.77"}
+  "lib/cmdliner/cmdliner_docgen.cmx" {"F:S4092T1653572930.77"}
+  "lib/cmdliner/cmdliner_eval.cmx" {"F:S4643T1653572930.77"}
+  "lib/cmdliner/cmdliner_exit.cmx" {"F:S176T1653572930.77"}
+  "lib/cmdliner/cmdliner_info.cmx" {"F:S14000T1653572930.77"}
+  "lib/cmdliner/cmdliner_manpage.cmx" {"F:S7528T1653572930.77"}
+  "lib/cmdliner/cmdliner_msg.cmx" {"F:S3080T1653572930.77"}
+  "lib/cmdliner/cmdliner_term.cmx" {"F:S1526T1653572930.77"}
+  "lib/cmdliner/cmdliner_term_deprecated.cmx" {"F:S3954T1653572930.77"}
+  "lib/cmdliner/cmdliner_trie.cmx" {"F:S3049T1653572930.77"}
+  "lib/cmdliner/opam" {"F:S1445T1653572930.77"}
+]

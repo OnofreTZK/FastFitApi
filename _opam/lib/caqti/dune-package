@@ -1,0 +1,268 @@
+(lang dune 3.2)
+(name caqti)
+(version 1.8.0)
+(sections (lib .) (libexec .) (doc ../../doc/caqti))
+(files
+ (lib
+  (.private/caqti_compat.cmi
+   .private/caqti_compat.cmt
+   META
+   blocking/caqti_blocking.a
+   blocking/caqti_blocking.cma
+   blocking/caqti_blocking.cmi
+   blocking/caqti_blocking.cmt
+   blocking/caqti_blocking.cmti
+   blocking/caqti_blocking.cmx
+   blocking/caqti_blocking.cmxa
+   blocking/caqti_blocking.ml
+   blocking/caqti_blocking.mli
+   blocking/caqti_blocking_sql_io.cmi
+   blocking/caqti_blocking_sql_io.cmt
+   blocking/caqti_blocking_sql_io.cmti
+   blocking/caqti_blocking_sql_io.cmx
+   blocking/caqti_blocking_sql_io.ml
+   blocking/caqti_blocking_sql_io.mli
+   caqti.a
+   caqti.cma
+   caqti.cmxa
+   caqti_common.cmi
+   caqti_common.cmt
+   caqti_common.cmti
+   caqti_common.cmx
+   caqti_common.ml
+   caqti_common.mli
+   caqti_common_priv.cmi
+   caqti_common_priv.cmt
+   caqti_common_priv.cmti
+   caqti_common_priv.cmx
+   caqti_common_priv.ml
+   caqti_common_priv.mli
+   caqti_compat.cmx
+   caqti_compat.ml
+   caqti_connect.cmi
+   caqti_connect.cmt
+   caqti_connect.cmti
+   caqti_connect.cmx
+   caqti_connect.ml
+   caqti_connect.mli
+   caqti_connect_sig.cmi
+   caqti_connect_sig.cmti
+   caqti_connect_sig.mli
+   caqti_connection.cmi
+   caqti_connection.cmt
+   caqti_connection.cmti
+   caqti_connection.cmx
+   caqti_connection.ml
+   caqti_connection.mli
+   caqti_connection_sig.cmi
+   caqti_connection_sig.cmti
+   caqti_connection_sig.mli
+   caqti_driver_info.cmi
+   caqti_driver_info.cmt
+   caqti_driver_info.cmti
+   caqti_driver_info.cmx
+   caqti_driver_info.ml
+   caqti_driver_info.mli
+   caqti_driver_lib.cmi
+   caqti_driver_lib.cmt
+   caqti_driver_lib.cmti
+   caqti_driver_lib.cmx
+   caqti_driver_lib.ml
+   caqti_driver_lib.mli
+   caqti_driver_sig.cmi
+   caqti_driver_sig.cmti
+   caqti_driver_sig.mli
+   caqti_error.cmi
+   caqti_error.cmt
+   caqti_error.cmti
+   caqti_error.cmx
+   caqti_error.ml
+   caqti_error.mli
+   caqti_heap.cmi
+   caqti_heap.cmt
+   caqti_heap.cmti
+   caqti_heap.cmx
+   caqti_heap.ml
+   caqti_heap.mli
+   caqti_mult.cmi
+   caqti_mult.cmt
+   caqti_mult.cmti
+   caqti_mult.cmx
+   caqti_mult.ml
+   caqti_mult.mli
+   caqti_pool.cmi
+   caqti_pool.cmt
+   caqti_pool.cmti
+   caqti_pool.cmx
+   caqti_pool.ml
+   caqti_pool.mli
+   caqti_pool_sig.cmi
+   caqti_pool_sig.cmti
+   caqti_pool_sig.mli
+   caqti_query.cmi
+   caqti_query.cmt
+   caqti_query.cmti
+   caqti_query.cmx
+   caqti_query.ml
+   caqti_query.mli
+   caqti_request.cmi
+   caqti_request.cmt
+   caqti_request.cmti
+   caqti_request.cmx
+   caqti_request.ml
+   caqti_request.mli
+   caqti_response_sig.cmi
+   caqti_response_sig.cmti
+   caqti_response_sig.mli
+   caqti_sql.cmi
+   caqti_sql.cmt
+   caqti_sql.cmti
+   caqti_sql.cmx
+   caqti_sql.ml
+   caqti_sql.mli
+   caqti_sql_io.cmi
+   caqti_sql_io.cmt
+   caqti_sql_io.cmti
+   caqti_sql_io.cmx
+   caqti_sql_io.ml
+   caqti_sql_io.mli
+   caqti_stream.cmi
+   caqti_stream.cmt
+   caqti_stream.cmti
+   caqti_stream.cmx
+   caqti_stream.ml
+   caqti_stream.mli
+   caqti_type.cmi
+   caqti_type.cmt
+   caqti_type.cmti
+   caqti_type.cmx
+   caqti_type.ml
+   caqti_type.mli
+   caqti_type_sig.cmi
+   caqti_type_sig.cmti
+   caqti_type_sig.mli
+   dune-package
+   opam))
+ (libexec (blocking/caqti_blocking.cmxs caqti.cmxs))
+ (doc
+  (CHANGES.md README.md odoc-pages/query_template.mld odoc-pages/tweaks.mld)))
+(library
+ (name caqti)
+ (kind normal)
+ (archives (byte caqti.cma) (native caqti.cmxa))
+ (plugins (byte caqti.cma) (native caqti.cmxs))
+ (native_archives caqti.a)
+ (requires angstrom bigstringaf logs ptime uri)
+ (modes byte native)
+ (obj_dir (private_dir .private))
+ (modules
+  (unwrapped
+   ((name Caqti_common)
+    (obj_name caqti_common)
+    (visibility public)
+    (impl)
+    (intf))
+   ((name Caqti_common_priv)
+    (obj_name caqti_common_priv)
+    (visibility public)
+    (impl)
+    (intf))
+   ((name Caqti_compat) (obj_name caqti_compat) (visibility private) (impl))
+   ((name Caqti_connect)
+    (obj_name caqti_connect)
+    (visibility public)
+    (impl)
+    (intf))
+   ((name Caqti_connect_sig)
+    (obj_name caqti_connect_sig)
+    (visibility public)
+    (intf))
+   ((name Caqti_connection)
+    (obj_name caqti_connection)
+    (visibility public)
+    (impl)
+    (intf))
+   ((name Caqti_connection_sig)
+    (obj_name caqti_connection_sig)
+    (visibility public)
+    (intf))
+   ((name Caqti_driver_info)
+    (obj_name caqti_driver_info)
+    (visibility public)
+    (impl)
+    (intf))
+   ((name Caqti_driver_lib)
+    (obj_name caqti_driver_lib)
+    (visibility public)
+    (impl)
+    (intf))
+   ((name Caqti_driver_sig)
+    (obj_name caqti_driver_sig)
+    (visibility public)
+    (intf))
+   ((name Caqti_error)
+    (obj_name caqti_error)
+    (visibility public)
+    (impl)
+    (intf))
+   ((name Caqti_heap) (obj_name caqti_heap) (visibility public) (impl) (intf))
+   ((name Caqti_mult) (obj_name caqti_mult) (visibility public) (impl) (intf))
+   ((name Caqti_pool) (obj_name caqti_pool) (visibility public) (impl) (intf))
+   ((name Caqti_pool_sig)
+    (obj_name caqti_pool_sig)
+    (visibility public)
+    (intf))
+   ((name Caqti_query)
+    (obj_name caqti_query)
+    (visibility public)
+    (impl)
+    (intf))
+   ((name Caqti_request)
+    (obj_name caqti_request)
+    (visibility public)
+    (impl)
+    (intf))
+   ((name Caqti_response_sig)
+    (obj_name caqti_response_sig)
+    (visibility public)
+    (intf))
+   ((name Caqti_sql) (obj_name caqti_sql) (visibility public) (impl) (intf))
+   ((name Caqti_sql_io)
+    (obj_name caqti_sql_io)
+    (visibility public)
+    (impl)
+    (intf))
+   ((name Caqti_stream)
+    (obj_name caqti_stream)
+    (visibility public)
+    (impl)
+    (intf))
+   ((name Caqti_type) (obj_name caqti_type) (visibility public) (impl) (intf))
+   ((name Caqti_type_sig)
+    (obj_name caqti_type_sig)
+    (visibility public)
+    (intf)))))
+(library
+ (name caqti.blocking)
+ (kind normal)
+ (archives
+  (byte blocking/caqti_blocking.cma)
+  (native blocking/caqti_blocking.cmxa))
+ (plugins
+  (byte blocking/caqti_blocking.cma)
+  (native blocking/caqti_blocking.cmxs))
+ (native_archives blocking/caqti_blocking.a)
+ (requires caqti logs threads unix)
+ (modes byte native)
+ (modules
+  (unwrapped
+   ((name Caqti_blocking)
+    (obj_name caqti_blocking)
+    (visibility public)
+    (impl)
+    (intf))
+   ((name Caqti_blocking_sql_io)
+    (obj_name caqti_blocking_sql_io)
+    (visibility public)
+    (impl)
+    (intf)))))

@@ -1,0 +1,52 @@
+(lang dune 3.2)
+(name pg_query)
+(version 0.9.7)
+(sections (lib .) (libexec .) (bin ../../bin) (doc ../../doc/pg_query))
+(files
+ (lib
+  (META
+   dune-package
+   ffi.ml
+   libpg_query.a
+   opam
+   pg_query.a
+   pg_query.cmi
+   pg_query.cmt
+   pg_query.cmti
+   pg_query.cmx
+   pg_query.cmxa
+   pg_query.ml
+   pg_query.mli
+   pg_query__.cmi
+   pg_query__.cmt
+   pg_query__.cmx
+   pg_query__.ml
+   pg_query__Ffi.cmi
+   pg_query__Ffi.cmt
+   pg_query__Ffi.cmx))
+ (libexec (pg_query.cmxs))
+ (bin (pg_check))
+ (doc (CHANGES.md LICENSE README.md)))
+(library
+ (name pg_query)
+ (kind normal)
+ (archives (native pg_query.cmxa))
+ (plugins (native pg_query.cmxs))
+ (foreign_archives libpg_query.a)
+ (native_archives pg_query.a)
+ (requires ctypes ctypes.foreign ppx_deriving.runtime)
+ (main_module_name Pg_query)
+ (modes native)
+ (modules
+  (wrapped
+   (main_module_name Pg_query)
+   (modules
+    ((name Ffi) (obj_name pg_query__Ffi) (visibility public) (impl))
+    ((name Pg_query) (obj_name pg_query) (visibility public) (impl) (intf)))
+   (alias_module
+    (name Pg_query__)
+    (obj_name pg_query__)
+    (visibility public)
+    (kind alias)
+    (impl))
+   (wrapped true))))

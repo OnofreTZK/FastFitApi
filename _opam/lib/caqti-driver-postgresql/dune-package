@@ -1,0 +1,39 @@
+(lang dune 3.2)
+(name caqti-driver-postgresql)
+(version 1.8.0)
+(sections (lib .) (libexec .) (doc ../../doc/caqti-driver-postgresql))
+(files
+ (lib
+  (META
+   caqti_driver_postgresql.a
+   caqti_driver_postgresql.cma
+   caqti_driver_postgresql.cmi
+   caqti_driver_postgresql.cmt
+   caqti_driver_postgresql.cmti
+   caqti_driver_postgresql.cmx
+   caqti_driver_postgresql.cmxa
+   caqti_driver_postgresql.ml
+   caqti_driver_postgresql.mli
+   dune-package
+   opam))
+ (libexec (caqti_driver_postgresql.cmxs))
+ (doc (CHANGES.md README.md)))
+(library
+ (name caqti-driver-postgresql)
+ (kind normal)
+ (archives
+  (byte caqti_driver_postgresql.cma)
+  (native caqti_driver_postgresql.cmxa))
+ (plugins
+  (byte caqti_driver_postgresql.cma)
+  (native caqti_driver_postgresql.cmxs))
+ (native_archives caqti_driver_postgresql.a)
+ (requires caqti postgresql)
+ (modes byte native)
+ (modules
+  (singleton
+   (name Caqti_driver_postgresql)
+   (obj_name caqti_driver_postgresql)
+   (visibility public)
+   (impl)
+   (intf))))

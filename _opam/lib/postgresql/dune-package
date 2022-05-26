@@ -1,0 +1,73 @@
+(lang dune 3.2)
+(name postgresql)
+(version 5.0.0)
+(sections
+ (lib .)
+ (libexec .)
+ (doc ../../doc/postgresql)
+ (stublibs ../stublibs))
+(files
+ (lib
+  (META
+   dune-package
+   error_code.ml
+   error_field.ml
+   libpostgresql_stubs.a
+   opam
+   postgresql.a
+   postgresql.cma
+   postgresql.cmi
+   postgresql.cmt
+   postgresql.cmti
+   postgresql.cmx
+   postgresql.cmxa
+   postgresql.ml
+   postgresql.mli
+   postgresql__.cmi
+   postgresql__.cmt
+   postgresql__.cmx
+   postgresql__.ml
+   postgresql__Error_code.cmi
+   postgresql__Error_code.cmt
+   postgresql__Error_code.cmx
+   postgresql__Error_field.cmi
+   postgresql__Error_field.cmt
+   postgresql__Error_field.cmx))
+ (libexec (postgresql.cmxs))
+ (doc (CHANGES.md LICENSE.md README.md))
+ (stublibs (dllpostgresql_stubs.so)))
+(library
+ (name postgresql)
+ (kind normal)
+ (archives (byte postgresql.cma) (native postgresql.cmxa))
+ (plugins (byte postgresql.cma) (native postgresql.cmxs))
+ (foreign_objects postgresql_stubs.o)
+ (foreign_archives libpostgresql_stubs.a)
+ (native_archives postgresql.a)
+ (requires threads bigarray)
+ (main_module_name Postgresql)
+ (modes byte native)
+ (modules
+  (wrapped
+   (main_module_name Postgresql)
+   (modules
+    ((name Error_code)
+     (obj_name postgresql__Error_code)
+     (visibility public)
+     (impl))
+    ((name Error_field)
+     (obj_name postgresql__Error_field)
+     (visibility public)
+     (impl))
+    ((name Postgresql)
+     (obj_name postgresql)
+     (visibility public)
+     (impl)
+     (intf)))
+   (alias_module
+    (name Postgresql__)
+    (obj_name postgresql__)
+    (visibility public)
+    (kind alias)
+    (impl))
+   (wrapped true))))

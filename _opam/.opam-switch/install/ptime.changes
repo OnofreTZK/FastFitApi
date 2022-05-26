@@ -1,0 +1,40 @@
+opam-version: "2.0"
+added: [
+  "doc/ptime" {"D"}
+  "doc/ptime/CHANGES.md" {"F:S2467T1653572937.28"}
+  "doc/ptime/LICENSE.md" {"F:S739T1653572937.28"}
+  "doc/ptime/README.md" {"F:S1293T1653572937.28"}
+  "doc/ptime/min_clock.ml" {"F:S973T1653572937.28"}
+  "doc/ptime/odoc-pages/index.mld" {"F:S759T1653572937.28"}
+  "lib/ptime" {"D"}
+  "lib/ptime/META" {"F:S973T1653572937.28"}
+  "lib/ptime/clock/os/libptime_clock_stubs.a" {"F:S45490T1653572937.28"}
+  "lib/ptime/clock/os/ptime_clock.a" {"F:S6060T1653572937.28"}
+  "lib/ptime/clock/os/ptime_clock.cma" {"F:S4558T1653572937.28"}
+  "lib/ptime/clock/os/ptime_clock.cmi" {"F:S1021T1653572937.28"}
+  "lib/ptime/clock/os/ptime_clock.cmti" {"F:S12664T1653572937.28"}
+  "lib/ptime/clock/os/ptime_clock.cmx" {"F:S1020T1653572937.28"}
+  "lib/ptime/clock/os/ptime_clock.cmxa" {"F:S430T1653572937.28"}
+  "lib/ptime/clock/os/ptime_clock.cmxs" {"F:S29920T1653572937.28"}
+  "lib/ptime/clock/os/ptime_clock.mli" {"F:S4343T1653572937.28"}
+  "lib/ptime/clock/os/runtime.js" {"F:S2677T1653572937.28"}
+  "lib/ptime/clock/ptime_clock.cmi" {"F:S1015T1653572937.28"}
+  "lib/ptime/clock/ptime_clock.cmti" {"F:S12646T1653572937.28"}
+  "lib/ptime/clock/ptime_clock.mli" {"F:S4343T1653572937.28"}
+  "lib/ptime/opam" {"F:S1386T1653572937.28"}
+  "lib/ptime/ptime.a" {"F:S97878T1653572937.28"}
+  "lib/ptime/ptime.cma" {"F:S130958T1653572937.28"}
+  "lib/ptime/ptime.cmi" {"F:S8545T1653572937.28"}
+  "lib/ptime/ptime.cmti" {"F:S83832T1653572937.28"}
+  "lib/ptime/ptime.cmx" {"F:S6964T1653572937.28"}
+  "lib/ptime/ptime.cmxa" {"F:S708T1653572937.28"}
+  "lib/ptime/ptime.cmxs" {"F:S116200T1653572937.28"}
+  "lib/ptime/ptime.mli" {"F:S25300T1653572937.28"}
+  "lib/ptime/ptime_top_init.ml" {"F:S1289T1653572937.28"}
+  "lib/ptime/top/ptime_top.a" {"F:S3910T1653572937.28"}
+  "lib/ptime/top/ptime_top.cma" {"F:S3270T1653572937.28"}
+  "lib/ptime/top/ptime_top.cmx" {"F:S1292T1653572937.28"}
+  "lib/ptime/top/ptime_top.cmxa" {"F:S1298T1653572937.28"}
+  "lib/ptime/top/ptime_top.cmxs" {"F:S19080T1653572937.28"}
+  "lib/stublibs/dllptime_clock_stubs.so" {"F:S27048T1653572937.28"}
+]

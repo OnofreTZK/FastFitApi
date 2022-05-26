@@ -1,0 +1,26 @@
+opam-version: "2.0"
+added: [
+  "doc/caqti-lwt" {"D"}
+  "doc/caqti-lwt/CHANGES.md" {"F:S13545T1653572957.23"}
+  "doc/caqti-lwt/README.md" {"F:S4846T1653572957.23"}
+  "lib/caqti-lwt" {"D"}
+  "lib/caqti-lwt/META" {"F:S212T1653572957.23"}
+  "lib/caqti-lwt/caqti_lwt.a" {"F:S22262T1653572957.23"}
+  "lib/caqti-lwt/caqti_lwt.cma" {"F:S40922T1653572957.23"}
+  "lib/caqti-lwt/caqti_lwt.cmi" {"F:S18922T1653572957.23"}
+  "lib/caqti-lwt/caqti_lwt.cmt" {"F:S107146T1653572957.23"}
+  "lib/caqti-lwt/caqti_lwt.cmti" {"F:S57395T1653572957.23"}
+  "lib/caqti-lwt/caqti_lwt.cmx" {"F:S5753T1653572957.23"}
+  "lib/caqti-lwt/caqti_lwt.cmxa" {"F:S2154T1653572957.23"}
+  "lib/caqti-lwt/caqti_lwt.cmxs" {"F:S39712T1653572957.23"}
+  "lib/caqti-lwt/caqti_lwt.ml" {"F:S2868T1653572957.23"}
+  "lib/caqti-lwt/caqti_lwt.mli" {"F:S1206T1653572957.23"}
+  "lib/caqti-lwt/caqti_lwt_sql_io.cmi" {"F:S714T1653572957.23"}
+  "lib/caqti-lwt/caqti_lwt_sql_io.cmt" {"F:S21994T1653572957.23"}
+  "lib/caqti-lwt/caqti_lwt_sql_io.cmti" {"F:S6376T1653572957.23"}
+  "lib/caqti-lwt/caqti_lwt_sql_io.cmx" {"F:S468T1653572957.23"}
+  "lib/caqti-lwt/caqti_lwt_sql_io.ml" {"F:S906T1653572957.23"}
+  "lib/caqti-lwt/caqti_lwt_sql_io.mli" {"F:S1160T1653572957.23"}
+  "lib/caqti-lwt/dune-package" {"F:S970T1653572957.23"}
+  "lib/caqti-lwt/opam" {"F:S992T1653572957.23"}
+]

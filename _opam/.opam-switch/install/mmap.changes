@@ -1,0 +1,21 @@
+opam-version: "2.0"
+added: [
+  "doc/mmap" {"D"}
+  "doc/mmap/CHANGES.md" {"F:S592T1653572938.27"}
+  "doc/mmap/LICENSE" {"F:S27179T1653572938.27"}
+  "doc/mmap/README.md" {"F:S172T1653572938.27"}
+  "lib/mmap" {"D"}
+  "lib/mmap/META" {"F:S180T1653572938.27"}
+  "lib/mmap/dune-package" {"F:S635T1653572938.27"}
+  "lib/mmap/mmap.a" {"F:S3726T1653572938.27"}
+  "lib/mmap/mmap.cma" {"F:S2838T1653572938.27"}
+  "lib/mmap/mmap.cmi" {"F:S795T1653572938.27"}
+  "lib/mmap/mmap.cmt" {"F:S3728T1653572938.27"}
+  "lib/mmap/mmap.cmti" {"F:S4686T1653572938.27"}
+  "lib/mmap/mmap.cmx" {"F:S608T1653572938.27"}
+  "lib/mmap/mmap.cmxa" {"F:S332T1653572938.27"}
+  "lib/mmap/mmap.cmxs" {"F:S17952T1653572938.27"}
+  "lib/mmap/mmap.ml" {"F:S77T1653572938.27"}
+  "lib/mmap/mmap.mli" {"F:S342T1653572938.27"}
+  "lib/mmap/opam" {"F:S644T1653572938.27"}
+]

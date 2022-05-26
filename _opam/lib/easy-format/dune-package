@@ -1,0 +1,39 @@
+(lang dune 3.2)
+(name easy-format)
+(version 1.3.3)
+(sections
+ (lib /home/onofre/College/MOBILE/fasfitapi/_opam/lib/easy-format)
+ (libexec /home/onofre/College/MOBILE/fasfitapi/_opam/lib/easy-format)
+ (doc /home/onofre/College/MOBILE/fasfitapi/_opam/doc/easy-format))
+(files
+ (lib
+  (META
+   dune-package
+   easy_format.a
+   easy_format.cma
+   easy_format.cmi
+   easy_format.cmt
+   easy_format.cmti
+   easy_format.cmx
+   easy_format.cmxa
+   easy_format.ml
+   easy_format.mli
+   opam))
+ (libexec (easy_format.cmxs))
+ (doc (CHANGES.md LICENSE README.md)))
+(library
+ (name easy-format)
+ (kind normal)
+ (synopsis "Indentation made easy(ier)")
+ (archives (byte easy_format.cma) (native easy_format.cmxa))
+ (plugins (byte easy_format.cma) (native easy_format.cmxs))
+ (native_archives easy_format.a)
+ (main_module_name Easy_format)
+ (modes byte native)
+ (modules
+  (singleton
+   (name Easy_format)
+   (obj_name easy_format)
+   (visibility public)
+   (impl)
+   (intf))))

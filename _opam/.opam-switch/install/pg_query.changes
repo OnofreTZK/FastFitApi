@@ -1,0 +1,30 @@
+opam-version: "2.0"
+added: [
+  "bin/pg_check" {"F:S7757088T1653573010.22"}
+  "doc/pg_query" {"D"}
+  "doc/pg_query/CHANGES.md" {"F:S370T1653573010.23"}
+  "doc/pg_query/LICENSE" {"F:S1138T1653573010.23"}
+  "doc/pg_query/README.md" {"F:S926T1653573010.23"}
+  "lib/pg_query" {"D"}
+  "lib/pg_query/META" {"F:S194T1653573010.22"}
+  "lib/pg_query/dune-package" {"F:S1162T1653573010.22"}
+  "lib/pg_query/ffi.ml" {"F:S1371T1653573010.22"}
+  "lib/pg_query/libpg_query.a" {"F:S11779332T1653573010.23"}
+  "lib/pg_query/opam" {"F:S970T1653573010.23"}
+  "lib/pg_query/pg_query.a" {"F:S50636T1653573010.23"}
+  "lib/pg_query/pg_query.cmi" {"F:S1363T1653573010.23"}
+  "lib/pg_query/pg_query.cmt" {"F:S65551T1653573010.23"}
+  "lib/pg_query/pg_query.cmti" {"F:S11702T1653573010.23"}
+  "lib/pg_query/pg_query.cmx" {"F:S1387T1653573010.23"}
+  "lib/pg_query/pg_query.cmxa" {"F:S2267T1653573010.23"}
+  "lib/pg_query/pg_query.cmxs" {"F:S4735656T1653573010.23"}
+  "lib/pg_query/pg_query.ml" {"F:S1293T1653573010.23"}
+  "lib/pg_query/pg_query.mli" {"F:S1635T1653573010.23"}
+  "lib/pg_query/pg_query__.cmi" {"F:S206T1653573010.23"}
+  "lib/pg_query/pg_query__.cmt" {"F:S2426T1653573010.23"}
+  "lib/pg_query/pg_query__.cmx" {"F:S118T1653573010.23"}
+  "lib/pg_query/pg_query__.ml" {"F:S58T1653573010.23"}
+  "lib/pg_query/pg_query__Ffi.cmi" {"F:S2969T1653573010.23"}
+  "lib/pg_query/pg_query__Ffi.cmt" {"F:S22819T1653573010.23"}
+  "lib/pg_query/pg_query__Ffi.cmx" {"F:S1099T1653573010.23"}
+]

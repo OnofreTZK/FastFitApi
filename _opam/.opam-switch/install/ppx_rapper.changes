@@ -1,0 +1,44 @@
+opam-version: "2.0"
+added: [
+  "doc/ppx_rapper" {"D"}
+  "doc/ppx_rapper/CHANGES.md" {"F:S1045T1653573014.28"}
+  "doc/ppx_rapper/LICENSE" {"F:S1253T1653573014.28"}
+  "doc/ppx_rapper/README.md" {"F:S9602T1653573014.28"}
+  "lib/ppx_rapper" {"D"}
+  "lib/ppx_rapper/META" {"F:S709T1653573014.24"}
+  "lib/ppx_rapper/codegen.ml" {"F:S13668T1653573014.24"}
+  "lib/ppx_rapper/dune-package" {"F:S2023T1653573014.24"}
+  "lib/ppx_rapper/opam" {"F:S817T1653573014.24"}
+  "lib/ppx_rapper/ppx.exe" {"F:S25028664T1653573014.28"}
+  "lib/ppx_rapper/ppx_rapper.a" {"F:S199354T1653573014.24"}
+  "lib/ppx_rapper/ppx_rapper.cma" {"F:S217709T1653573014.24"}
+  "lib/ppx_rapper/ppx_rapper.cmi" {"F:S10054T1653573014.24"}
+  "lib/ppx_rapper/ppx_rapper.cmt" {"F:S172317T1653573014.24"}
+  "lib/ppx_rapper/ppx_rapper.cmx" {"F:S8245T1653573014.24"}
+  "lib/ppx_rapper/ppx_rapper.cmxa" {"F:S15866T1653573014.24"}
+  "lib/ppx_rapper/ppx_rapper.cmxs" {"F:S233952T1653573014.28"}
+  "lib/ppx_rapper/ppx_rapper.ml" {"F:S13053T1653573014.24"}
+  "lib/ppx_rapper/ppx_rapper__.cmi" {"F:S309T1653573014.24"}
+  "lib/ppx_rapper/ppx_rapper__.cmt" {"F:S2861T1653573014.24"}
+  "lib/ppx_rapper/ppx_rapper__.cmx" {"F:S147T1653573014.24"}
+  "lib/ppx_rapper/ppx_rapper__.ml" {"F:S144T1653573014.24"}
+  "lib/ppx_rapper/ppx_rapper__Codegen.cmi" {"F:S15053T1653573014.24"}
+  "lib/ppx_rapper/ppx_rapper__Codegen.cmt" {"F:S221751T1653573014.24"}
+  "lib/ppx_rapper/ppx_rapper__Codegen.cmx" {"F:S15468T1653573014.24"}
+  "lib/ppx_rapper/ppx_rapper__Query.cmi" {"F:S2654T1653573014.24"}
+  "lib/ppx_rapper/ppx_rapper__Query.cmt" {"F:S135301T1653573014.24"}
+  "lib/ppx_rapper/ppx_rapper__Query.cmti" {"F:S13758T1653573014.24"}
+  "lib/ppx_rapper/ppx_rapper__Query.cmx" {"F:S12596T1653573014.24"}
+  "lib/ppx_rapper/query.ml" {"F:S46323T1653573014.24"}
+  "lib/ppx_rapper/query.mli" {"F:S1041T1653573014.24"}
+  "lib/ppx_rapper/runtime/rapper.a" {"F:S11084T1653573014.24"}
+  "lib/ppx_rapper/runtime/rapper.cma" {"F:S50229T1653573014.24"}
+  "lib/ppx_rapper/runtime/rapper.cmi" {"F:S29655T1653573014.25"}
+  "lib/ppx_rapper/runtime/rapper.cmt" {"F:S121296T1653573014.25"}
+  "lib/ppx_rapper/runtime/rapper.cmti" {"F:S69591T1653573014.25"}
+  "lib/ppx_rapper/runtime/rapper.cmx" {"F:S1214T1653573014.25"}
+  "lib/ppx_rapper/runtime/rapper.cmxa" {"F:S1014T1653573014.25"}
+  "lib/ppx_rapper/runtime/rapper.cmxs" {"F:S26136T1653573014.28"}
+  "lib/ppx_rapper/runtime/rapper.ml" {"F:S2952T1653573014.25"}
+  "lib/ppx_rapper/runtime/rapper.mli" {"F:S1078T1653573014.25"}
+]

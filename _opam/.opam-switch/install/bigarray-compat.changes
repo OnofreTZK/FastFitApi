@@ -1,0 +1,19 @@
+opam-version: "2.0"
+added: [
+  "doc/bigarray-compat" {"D"}
+  "doc/bigarray-compat/CHANGES.md" {"F:S228T1653572937.68"}
+  "doc/bigarray-compat/LICENSE.md" {"F:S779T1653572937.68"}
+  "doc/bigarray-compat/README.md" {"F:S183T1653572937.68"}
+  "lib/bigarray-compat" {"D"}
+  "lib/bigarray-compat/META" {"F:S204T1653572937.61"}
+  "lib/bigarray-compat/bigarray_compat.a" {"F:S4382T1653572937.61"}
+  "lib/bigarray-compat/bigarray_compat.cma" {"F:S11321T1653572937.61"}
+  "lib/bigarray-compat/bigarray_compat.cmi" {"F:S8442T1653572937.61"}
+  "lib/bigarray-compat/bigarray_compat.cmt" {"F:S43849T1653572937.61"}
+  "lib/bigarray-compat/bigarray_compat.cmx" {"F:S3730T1653572937.61"}
+  "lib/bigarray-compat/bigarray_compat.cmxa" {"F:S294T1653572937.61"}
+  "lib/bigarray-compat/bigarray_compat.cmxs" {"F:S18064T1653572937.61"}
+  "lib/bigarray-compat/bigarray_compat.ml" {"F:S23T1653572937.61"}
+  "lib/bigarray-compat/dune-package" {"F:S758T1653572937.61"}
+  "lib/bigarray-compat/opam" {"F:S580T1653572937.61"}
+]

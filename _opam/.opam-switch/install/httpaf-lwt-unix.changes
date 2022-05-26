@@ -1,0 +1,20 @@
+opam-version: "2.0"
+added: [
+  "doc/httpaf-lwt-unix" {"D"}
+  "doc/httpaf-lwt-unix/LICENSE" {"F:S1467T1653572955.6"}
+  "doc/httpaf-lwt-unix/README.md" {"F:S3965T1653572955.6"}
+  "lib/httpaf-lwt-unix" {"D"}
+  "lib/httpaf-lwt-unix/META" {"F:S236T1653572955.6"}
+  "lib/httpaf-lwt-unix/dune-package" {"F:S882T1653572955.6"}
+  "lib/httpaf-lwt-unix/httpaf_lwt_unix.a" {"F:S33556T1653572955.6"}
+  "lib/httpaf-lwt-unix/httpaf_lwt_unix.cma" {"F:S35648T1653572955.6"}
+  "lib/httpaf-lwt-unix/httpaf_lwt_unix.cmi" {"F:S1975T1653572955.6"}
+  "lib/httpaf-lwt-unix/httpaf_lwt_unix.cmt" {"F:S73677T1653572955.6"}
+  "lib/httpaf-lwt-unix/httpaf_lwt_unix.cmti" {"F:S10391T1653572955.6"}
+  "lib/httpaf-lwt-unix/httpaf_lwt_unix.cmx" {"F:S2194T1653572955.6"}
+  "lib/httpaf-lwt-unix/httpaf_lwt_unix.cmxa" {"F:S1183T1653572955.6"}
+  "lib/httpaf-lwt-unix/httpaf_lwt_unix.cmxs" {"F:S48488T1653572955.6"}
+  "lib/httpaf-lwt-unix/httpaf_lwt_unix.ml" {"F:S9104T1653572955.6"}
+  "lib/httpaf-lwt-unix/httpaf_lwt_unix.mli" {"F:S2595T1653572955.6"}
+  "lib/httpaf-lwt-unix/opam" {"F:S647T1653572955.6"}
+]

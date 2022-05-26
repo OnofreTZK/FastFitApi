@@ -1,0 +1,137 @@
+(lang dune 3.2)
+(name httpaf)
+(version 0.7.1)
+(sections (lib .) (libexec .) (doc ../../doc/httpaf))
+(files
+ (lib
+  (META
+   body.ml
+   client_connection.ml
+   config.ml
+   dune-package
+   headers.ml
+   httpaf.a
+   httpaf.cma
+   httpaf.cmi
+   httpaf.cmt
+   httpaf.cmti
+   httpaf.cmx
+   httpaf.cmxa
+   httpaf.ml
+   httpaf.mli
+   httpaf__.cmi
+   httpaf__.cmt
+   httpaf__.cmx
+   httpaf__.ml
+   httpaf__Body.cmi
+   httpaf__Body.cmt
+   httpaf__Body.cmx
+   httpaf__Client_connection.cmi
+   httpaf__Client_connection.cmt
+   httpaf__Client_connection.cmx
+   httpaf__Config.cmi
+   httpaf__Config.cmt
+   httpaf__Config.cmx
+   httpaf__Headers.cmi
+   httpaf__Headers.cmt
+   httpaf__Headers.cmx
+   httpaf__IOVec.cmi
+   httpaf__IOVec.cmt
+   httpaf__IOVec.cmx
+   httpaf__Message.cmi
+   httpaf__Message.cmt
+   httpaf__Message.cmx
+   httpaf__Method.cmi
+   httpaf__Method.cmt
+   httpaf__Method.cmx
+   httpaf__Optional_thunk.cmi
+   httpaf__Optional_thunk.cmt
+   httpaf__Optional_thunk.cmti
+   httpaf__Optional_thunk.cmx
+   httpaf__Parse.cmi
+   httpaf__Parse.cmt
+   httpaf__Parse.cmx
+   httpaf__Reqd.cmi
+   httpaf__Reqd.cmt
+   httpaf__Reqd.cmx
+   httpaf__Request.cmi
+   httpaf__Request.cmt
+   httpaf__Request.cmx
+   httpaf__Response.cmi
+   httpaf__Response.cmt
+   httpaf__Response.cmx
+   httpaf__Serialize.cmi
+   httpaf__Serialize.cmt
+   httpaf__Serialize.cmx
+   httpaf__Server_connection.cmi
+   httpaf__Server_connection.cmt
+   httpaf__Server_connection.cmx
+   httpaf__Status.cmi
+   httpaf__Status.cmt
+   httpaf__Status.cmx
+   httpaf__Version.cmi
+   httpaf__Version.cmt
+   httpaf__Version.cmx
+   iOVec.ml
+   message.ml
+   method.ml
+   opam
+   optional_thunk.ml
+   optional_thunk.mli
+   parse.ml
+   reqd.ml
+   request.ml
+   response.ml
+   serialize.ml
+   server_connection.ml
+   status.ml
+   version.ml))
+ (libexec (httpaf.cmxs))
+ (doc (LICENSE README.md)))
+(library
+ (name httpaf)
+ (kind normal)
+ (archives (byte httpaf.cma) (native httpaf.cmxa))
+ (plugins (byte httpaf.cma) (native httpaf.cmxs))
+ (native_archives httpaf.a)
+ (requires angstrom faraday bigstringaf result)
+ (main_module_name Httpaf)
+ (modes byte native)
+ (modules
+  (wrapped
+   (main_module_name Httpaf)
+   (modules
+    ((name Body) (obj_name httpaf__Body) (visibility public) (impl))
+    ((name Client_connection)
+     (obj_name httpaf__Client_connection)
+     (visibility public)
+     (impl))
+    ((name Config) (obj_name httpaf__Config) (visibility public) (impl))
+    ((name Headers) (obj_name httpaf__Headers) (visibility public) (impl))
+    ((name Httpaf) (obj_name httpaf) (visibility public) (impl) (intf))
+    ((name IOVec) (obj_name httpaf__IOVec) (visibility public) (impl))
+    ((name Message) (obj_name httpaf__Message) (visibility public) (impl))
+    ((name Method) (obj_name httpaf__Method) (visibility public) (impl))
+    ((name Optional_thunk)
+     (obj_name httpaf__Optional_thunk)
+     (visibility public)
+     (impl)
+     (intf))
+    ((name Parse) (obj_name httpaf__Parse) (visibility public) (impl))
+    ((name Reqd) (obj_name httpaf__Reqd) (visibility public) (impl))
+    ((name Request) (obj_name httpaf__Request) (visibility public) (impl))
+    ((name Response) (obj_name httpaf__Response) (visibility public) (impl))
+    ((name Serialize) (obj_name httpaf__Serialize) (visibility public) (impl))
+    ((name Server_connection)
+     (obj_name httpaf__Server_connection)
+     (visibility public)
+     (impl))
+    ((name Status) (obj_name httpaf__Status) (visibility public) (impl))
+    ((name Version) (obj_name httpaf__Version) (visibility public) (impl)))
+   (alias_module
+    (name Httpaf__)
+    (obj_name httpaf__)
+    (visibility public)
+    (kind alias)
+    (impl))
+   (wrapped true))))

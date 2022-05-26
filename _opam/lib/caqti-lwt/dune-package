@@ -1,0 +1,42 @@
+(lang dune 3.2)
+(name caqti-lwt)
+(version 1.8.0)
+(sections (lib .) (libexec .) (doc ../../doc/caqti-lwt))
+(files
+ (lib
+  (META
+   caqti_lwt.a
+   caqti_lwt.cma
+   caqti_lwt.cmi
+   caqti_lwt.cmt
+   caqti_lwt.cmti
+   caqti_lwt.cmx
+   caqti_lwt.cmxa
+   caqti_lwt.ml
+   caqti_lwt.mli
+   caqti_lwt_sql_io.cmi
+   caqti_lwt_sql_io.cmt
+   caqti_lwt_sql_io.cmti
+   caqti_lwt_sql_io.cmx
+   caqti_lwt_sql_io.ml
+   caqti_lwt_sql_io.mli
+   dune-package
+   opam))
+ (libexec (caqti_lwt.cmxs))
+ (doc (CHANGES.md README.md)))
+(library
+ (name caqti-lwt)
+ (kind normal)
+ (archives (byte caqti_lwt.cma) (native caqti_lwt.cmxa))
+ (plugins (byte caqti_lwt.cma) (native caqti_lwt.cmxs))
+ (native_archives caqti_lwt.a)
+ (requires caqti logs logs.lwt lwt lwt.unix)
+ (modes byte native)
+ (modules
+  (unwrapped
+   ((name Caqti_lwt) (obj_name caqti_lwt) (visibility public) (impl) (intf))
+   ((name Caqti_lwt_sql_io)
+    (obj_name caqti_lwt_sql_io)
+    (visibility public)
+    (impl)
+    (intf)))))
